@@ -1,0 +1,2205 @@
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:14:51 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/cdmsn.prism ./case-studies/cdmsn.props
+
+Parsing model file "./case-studies/cdmsn.prism"...
+
+Type:        SMG
+Modules:     player0 player1 player2 player3 
+Variables:   confidence1 confidence2 confidence3 preference1 preference2 preference3 sched 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/cdmsn.props"...
+
+1 property:
+(1) <<p1>>Pmax=? [ F all_prefer_1 ]
+
+---------------------------------------------------------------------
+
+Model checking: <<p1>>Pmax=? [ F all_prefer_1 ]
+
+Building model...
+
+Computing reachable states... 1240 states
+Reachable states exploration and model construction done in 0.106 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.128 seconds.
+
+Type:        SMG
+States:      1240 (1 initial)
+Transitions: 6240
+Choices:     2059
+Max/avg:     2/1.66
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 8 iterations and 0.006 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 8 iterations and 0.006 seconds.
+target=32, yes=1240, no=0, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.001 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 0.02 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.027 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:14:52 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/cloud_5.prism ./case-studies/cloud.props
+
+Parsing model file "./case-studies/cloud_5.prism"...
+
+Type:        SMG
+Modules:     player1_start PlayerScheduler ServerA ServerB VM1 VM2 VM3 VM4 VM5 FunctionsOnServerA FunctionsOnServerB Service 
+Variables:   st p sa sb vm1 vm2 vm3 vm4 vm5 web1 web2 web3 web4 web5 web6 web7 web8 web9 web10 web1234 web5678910 s 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/cloud.props"...
+
+1 property:
+(1) <<controller>>Pmax=? [ F "deployed" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<controller>>Pmax=? [ F "deployed" ]
+
+Building model...
+
+Computing reachable states... 8842 states
+Reachable states exploration and model construction done in 0.45 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.498 seconds.
+
+Type:        SMG
+States:      8842 (1 initial)
+Transitions: 60437
+Choices:     34805
+Max/avg:     11/3.94
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 4 iterations and 0.008 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 12 iterations and 0.01 seconds.
+target=7280, yes=7280, no=781, maybe=781
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.003 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 6 iterations and 0.009 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.038 seconds.
+
+Value in the initial state: 0.9999980009999999
+
+Time for model checking: 0.044 seconds.
+
+Result: 0.9999980009999999 (+/- 9.970020050320593E-6 estimated; rel err 9.970039980430516E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:14:53 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/cloud_6.prism ./case-studies/cloud.props
+
+Parsing model file "./case-studies/cloud_6.prism"...
+
+Type:        SMG
+Modules:     player1_start PlayerScheduler ServerA ServerB VM1 VM2 VM3 VM4 VM5 VM6 FunctionsOnServerA FunctionsOnServerB Service 
+Variables:   st p sa sb vm1 vm2 vm3 vm4 vm5 vm6 web1 web2 web3 web4 web5 web6 web7 web8 web9 web10 web11 web12 web1234 web56789101112 s 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/cloud.props"...
+
+1 property:
+(1) <<controller>>Pmax=? [ F "deployed" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<controller>>Pmax=? [ F "deployed" ]
+
+Building model...
+
+Computing reachable states... 34954 states
+Reachable states exploration and model construction done in 0.809 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.93 seconds.
+
+Type:        SMG
+States:      34954 (1 initial)
+Transitions: 274965
+Choices:     155509
+Max/avg:     13/4.45
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 4 iterations and 0.043 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 12 iterations and 0.053 seconds.
+target=30464, yes=30464, no=1225, maybe=3265
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.013 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 8 iterations and 0.035 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.159 seconds.
+
+Value in the initial state: 0.9998980299
+
+Time for model checking: 0.169 seconds.
+
+Result: 0.9998980299 (+/- 9.60595087231016E-6 estimated; rel err 9.606930491973119E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:14:55 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/mdsm.prism ./case-studies/mdsm.props -prop 1
+
+Parsing model file "./case-studies/mdsm.prism"...
+
+Type:        SMG
+Modules:     player0 player1 player2 player3 
+Variables:   time job1 job2 job3 sched job_arrived1 deviate job_arrived2 job_arrived3 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/mdsm.props"...
+
+2 properties:
+(1) <<p1>>Pmax=? [ F deviate=1 ]
+(2) <<p2>>Pmax=? [ F deviate=1 ]
+
+---------------------------------------------------------------------
+
+Model checking: <<p1>>Pmax=? [ F deviate=1 ]
+
+Building model...
+
+Computing reachable states... 62245 states
+Reachable states exploration and model construction done in 0.588 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.686 seconds.
+
+Type:        SMG
+States:      62245 (1 initial)
+Transitions: 151143
+Choices:     83445
+Max/avg:     2/1.34
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 14 iterations and 0.073 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 450 iterations and 1.424 seconds.
+target=28716, yes=32980, no=1706, maybe=27559
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.018 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 121 iterations and 0.405 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 1.943 seconds.
+
+Value in the initial state: 0.9890681632263238
+
+Time for model checking: 1.966 seconds.
+
+Result: 0.9890681632263238 (+/- 4.429454503185325E-6 estimated; rel err 4.478411769656521E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:14:58 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/mdsm.prism ./case-studies/mdsm.props -prop 2
+
+Parsing model file "./case-studies/mdsm.prism"...
+
+Type:        SMG
+Modules:     player0 player1 player2 player3 
+Variables:   time job1 job2 job3 sched job_arrived1 deviate job_arrived2 job_arrived3 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/mdsm.props"...
+
+2 properties:
+(1) <<p1>>Pmax=? [ F deviate=1 ]
+(2) <<p2>>Pmax=? [ F deviate=1 ]
+
+---------------------------------------------------------------------
+
+Model checking: <<p2>>Pmax=? [ F deviate=1 ]
+
+Building model...
+
+Computing reachable states... 62245 states
+Reachable states exploration and model construction done in 0.629 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.729 seconds.
+
+Type:        SMG
+States:      62245 (1 initial)
+Transitions: 151143
+Choices:     83445
+Max/avg:     2/1.34
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 1 iterations and 0.016 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 2 iterations and 0.02 seconds.
+target=28716, yes=28716, no=33529, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.011 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.003 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 0.067 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.094 seconds.
+
+Result: 0.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:15:00 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV10_10.prism ./case-studies/AV.props -prop 1
+
+Parsing model file "./case-studies/AV10_10.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "caught" ]
+
+Building model...
+
+Computing reachable states... 106524 states
+Reachable states exploration and model construction done in 0.815 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.99 seconds.
+
+Type:        SMG
+States:      106524 (1 initial)
+Transitions: 297790
+Choices:     231542
+Max/avg:     6/2.17
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 2 iterations and 0.1 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 4 iterations and 0.064 seconds.
+target=198, yes=396, no=106128, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.007 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.006 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 0.223 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.241 seconds.
+
+Result: 0.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:15:01 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV10_10.prism ./case-studies/AV.props -prop 2
+
+Parsing model file "./case-studies/AV10_10.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "exit" ]
+
+Building model...
+
+Computing reachable states... 106524 states
+Reachable states exploration and model construction done in 0.82 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.005 seconds.
+
+Type:        SMG
+States:      106524 (1 initial)
+Transitions: 297790
+Choices:     231542
+Max/avg:     6/2.17
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 81 iterations and 0.995 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 1296 iterations and 16.92 seconds.
+target=884, yes=75552, no=7136, maybe=23836
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.014 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 165 iterations and 0.91 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 18.865 seconds.
+
+Value in the initial state: 0.9999999570854503
+
+Time for model checking: 18.882 seconds.
+
+Result: 0.9999999570854503 (+/- 9.390037387784132E-6 estimated; rel err 9.390037790753376E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:15:22 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV10_10.prism ./case-studies/AV.props -prop 3
+
+Parsing model file "./case-studies/AV10_10.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "found_item" ]
+
+Building model...
+
+Computing reachable states... 106524 states
+Reachable states exploration and model construction done in 0.94 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.131 seconds.
+
+Type:        SMG
+States:      106524 (1 initial)
+Transitions: 297790
+Choices:     231542
+Max/avg:     6/2.17
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 9 iterations and 0.161 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 1656 iterations and 12.866 seconds.
+target=53262, yes=91445, no=1401, maybe=13678
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.014 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 155 iterations and 0.443 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 13.508 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 13.523 seconds.
+
+Result: 1.0 (+/- 9.62920365548806E-6 estimated; rel err 9.62920365548806E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:15:37 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV15_15.prism ./case-studies/AV.props -prop 1
+
+Parsing model file "./case-studies/AV15_15.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "caught" ]
+
+Building model...
+
+Computing reachable states... 380098 480464 states
+Reachable states exploration and model construction done in 3.873 secs.
+Sorting reachable states list...
+
+Time for model construction: 4.601 seconds.
+
+Type:        SMG
+States:      480464 (1 initial)
+Transitions: 1380660
+Choices:     1028092
+Max/avg:     6/2.14
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 2 iterations and 0.322 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 4 iterations and 0.306 seconds.
+target=448, yes=896, no=479568, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.012 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.019 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 0.714 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.761 seconds.
+
+Result: 0.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:15:43 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV15_15.prism ./case-studies/AV.props -prop 2
+
+Parsing model file "./case-studies/AV15_15.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "exit" ]
+
+Building model...
+
+Computing reachable states... 394617 480464 states
+Reachable states exploration and model construction done in 3.672 secs.
+Sorting reachable states list...
+
+Time for model construction: 4.416 seconds.
+
+Type:        SMG
+States:      480464 (1 initial)
+Transitions: 1380660
+Choices:     1028092
+Max/avg:     6/2.14
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 121 iterations and 6.48 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 3146 iterations and 180.71 seconds.
+target=1884, yes=346012, no=17136, maybe=117316
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.062 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 165 iterations and 3.458 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 190.747 seconds.
+
+Value in the initial state: 0.9999999999995816
+
+Time for model checking: 190.776 seconds.
+
+Result: 0.9999999999995816 (+/- 8.462490793014175E-6 estimated; rel err 8.462490793017716E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:18:59 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/AV15_15.prism ./case-studies/AV.props -prop 3
+
+Parsing model file "./case-studies/AV15_15.prism"...
+
+Type:        SMG
+Modules:     intruder observer 
+Variables:   turn caught found_item x y s1 a b s2 detected 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/AV.props"...
+
+3 properties:
+(1) <<1>>Pmax=? [ F "caught" ]
+(2) <<1>>Pmax=? [ F "exit" ]
+(3) <<1>>Pmax=? [ F "found_item" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "found_item" ]
+
+Building model...
+
+Computing reachable states... 401834 480464 states
+Reachable states exploration and model construction done in 3.644 secs.
+Sorting reachable states list...
+
+Time for model construction: 4.367 seconds.
+
+Type:        SMG
+States:      480464 (1 initial)
+Transitions: 1380660
+Choices:     1028092
+Max/avg:     6/2.14
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 9 iterations and 0.421 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 3746 iterations and 125.565 seconds.
+target=240232, yes=414160, no=3306, maybe=62998
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.029 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 157 iterations and 1.677 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 127.719 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 127.758 seconds.
+
+Result: 1.0 (+/- 8.668907536386968E-6 estimated; rel err 8.668907536386968E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:12 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/charlton.prism ./case-studies/charlton.props -prop 1
+
+Parsing model file "./case-studies/charlton.prism"...
+
+Type:        SMG
+Modules:     field_2 field_1 field_0 field_7 field_8 field_10 field_12 field_17 field_21 field_31 field_33 field_38 field_3 field_4 field_5 field_6 field_9 field_13 field_14 field_15 field_16 field_18 field_19 field_20 field_22 field_23 field_24 field_25 field_27 field_28 field_29 field_30 field_32 field_34 field_35 field_36 field_37 field_39 field_40 field_42 field_43 field_11 field_26 field_41 terminals 
+Variables:   p car_position s 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/charlton.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "accidents" ]
+(2) <<1>>Pmax=? [ F "reach_goal" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "accidents" ]
+
+Building model...
+
+Computing reachable states... 502 states
+Reachable states exploration and model construction done in 0.195 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.235 seconds.
+
+Type:        SMG
+States:      502 (1 initial)
+Transitions: 1240
+Choices:     785
+Max/avg:     3/1.56
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 6 iterations and 0.003 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 48 iterations and 0.012 seconds.
+target=35, yes=382, no=13, maybe=107
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 18 iterations and 0.004 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.025 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.029 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:13 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/charlton.prism ./case-studies/charlton.props -prop 2
+
+Parsing model file "./case-studies/charlton.prism"...
+
+Type:        SMG
+Modules:     field_2 field_1 field_0 field_7 field_8 field_10 field_12 field_17 field_21 field_31 field_33 field_38 field_3 field_4 field_5 field_6 field_9 field_13 field_14 field_15 field_16 field_18 field_19 field_20 field_22 field_23 field_24 field_25 field_27 field_28 field_29 field_30 field_32 field_34 field_35 field_36 field_37 field_39 field_40 field_42 field_43 field_11 field_26 field_41 terminals 
+Variables:   p car_position s 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/charlton.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "accidents" ]
+(2) <<1>>Pmax=? [ F "reach_goal" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "reach_goal" ]
+
+Building model...
+
+Computing reachable states... 502 states
+Reachable states exploration and model construction done in 0.153 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.188 seconds.
+
+Type:        SMG
+States:      502 (1 initial)
+Transitions: 1240
+Choices:     785
+Max/avg:     3/1.56
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 25 iterations and 0.014 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 61 iterations and 0.011 seconds.
+target=1, yes=2, no=82, maybe=418
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 54 iterations and 0.017 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.053 seconds.
+
+Value in the initial state: 0.9476067836642807
+
+Time for model checking: 0.059 seconds.
+
+Result: 0.9476067836642807 (+/- 4.893599559255986E-6 estimated; rel err 5.164166871339849E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:15 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/dice10.prism ./case-studies/dice.props -prop 1
+
+Parsing model file "./case-studies/dice10.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   s1 i x s2 y j 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/dice.props"...
+
+2 properties:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+(2) <<P1>>Pmax=? [ F "draw" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+
+Building model...
+
+Computing reachable states... 4855 states
+Reachable states exploration and model construction done in 0.091 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.126 seconds.
+
+Type:        SMG
+States:      4855 (1 initial)
+Transitions: 7464
+Choices:     6889
+Max/avg:     2/1.42
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 16 iterations and 0.019 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 40 iterations and 0.026 seconds.
+target=975, yes=1950, no=2741, maybe=164
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.001 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 22 iterations and 0.007 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.06 seconds.
+
+Value in the initial state: 0.7750362781334145
+
+Time for model checking: 0.067 seconds.
+
+Result: 0.7750362781334145 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:16 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/dice20.prism ./case-studies/dice.props -prop 1
+
+Parsing model file "./case-studies/dice20.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   s1 i x s2 y j 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/dice.props"...
+
+2 properties:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+(2) <<P1>>Pmax=? [ F "draw" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+
+Building model...
+
+Computing reachable states... 16915 states
+Reachable states exploration and model construction done in 0.173 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.242 seconds.
+
+Type:        SMG
+States:      16915 (1 initial)
+Transitions: 25764
+Choices:     24589
+Max/avg:     2/1.45
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 26 iterations and 0.056 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 70 iterations and 0.125 seconds.
+target=3450, yes=6900, no=9681, maybe=334
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.002 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 42 iterations and 0.01 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.201 seconds.
+
+Value in the initial state: 0.8239180334525085
+
+Time for model checking: 0.209 seconds.
+
+Result: 0.8239180334525085 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:17 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/dice50.prism ./case-studies/dice.props -prop 1
+
+Parsing model file "./case-studies/dice50.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   s1 i x s2 y j 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/dice.props"...
+
+2 properties:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+(2) <<P1>>Pmax=? [ F "draw" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+
+Building model...
+
+Computing reachable states... 96295 states
+Reachable states exploration and model construction done in 0.474 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.655 seconds.
+
+Type:        SMG
+States:      96295 (1 initial)
+Transitions: 145464
+Choices:     142489
+Max/avg:     2/1.48
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 56 iterations and 0.333 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 160 iterations and 0.797 seconds.
+target=19875, yes=39750, no=55701, maybe=844
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.006 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 102 iterations and 0.029 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 1.185 seconds.
+
+Value in the initial state: 0.8332936693090242
+
+Time for model checking: 1.203 seconds.
+
+Result: 0.8332936693090242 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:20 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/dice50MEC.prism ./case-studies/dice.props -prop 1
+
+Parsing model file "./case-studies/dice50MEC.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state s1 i x s2 y j 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/dice.props"...
+
+2 properties:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+(2) <<P1>>Pmax=? [ F "draw" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+
+Building model...
+
+Computing reachable states... 96299 states
+Reachable states exploration and model construction done in 0.483 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.675 seconds.
+
+Warning: Deadlocks detected and fixed in 1 states
+
+Type:        SMG
+States:      96299 (1 initial)
+Transitions: 145474
+Choices:     142496
+Max/avg:     2/1.48
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 56 iterations and 0.323 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 160 iterations and 0.843 seconds.
+target=19875, yes=39750, no=55702, maybe=847
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.009 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 111 iterations and 0.034 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 1.228 seconds.
+
+Value in the initial state: 0.4166465247793222
+
+Time for model checking: 1.248 seconds.
+
+Result: 0.4166465247793222 (+/- 3.098751899521801E-6 estimated; rel err 7.437364084971217E-6)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:22 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway5_5.prism ./case-studies/hallway.props -prop 1
+
+Parsing model file "./case-studies/hallway5_5.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "saved" ]
+
+Building model...
+
+Computing reachable states... 25000 states
+Reachable states exploration and model construction done in 0.393 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.458 seconds.
+
+Type:        SMG
+States:      25000 (1 initial)
+Transitions: 108200
+Choices:     61000
+Max/avg:     5/2.44
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 14 iterations and 0.106 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 14 iterations and 0.094 seconds.
+target=1000, yes=25000, no=0, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.003 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.003 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 0.218 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.229 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:23 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway5_5.prism ./case-studies/hallway.props -prop 2
+
+Parsing model file "./case-studies/hallway5_5.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ G !"damaged" ]
+
+Building model...
+
+Computing reachable states... 25000 states
+Reachable states exploration and model construction done in 0.38 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.452 seconds.
+
+Type:        SMG
+States:      25000 (1 initial)
+Transitions: 108200
+Choices:     61000
+Max/avg:     5/2.44
+
+Starting probabilistic reachability...
+Starting Prob0 (minmax)...
+Prob0 (minmax) took 2 iterations and 0.015 seconds.
+Starting Prob1 (minmax)...
+Prob1 (minmax) took 4 iterations and 0.02 seconds.
+target=12500, yes=12500, no=10000, maybe=2500
+Player 1: min
+Player 2: max
+Starting Adame value iteration...
+took 1 iterations and 0.003 seconds.
+Starting value iteration (minmax)...
+Value iteration (minmax) took 2 iterations and 0.008 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.056 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.073 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:25 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway8_8.prism ./case-studies/hallway.props -prop 1
+
+Parsing model file "./case-studies/hallway8_8.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "saved" ]
+
+Building model...
+
+Computing reachable states... 163840 states
+Reachable states exploration and model construction done in 1.478 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.791 seconds.
+
+Type:        SMG
+States:      163840 (1 initial)
+Transitions: 727040
+Choices:     409600
+Max/avg:     5/2.50
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 20 iterations and 0.501 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 20 iterations and 0.504 seconds.
+target=2560, yes=163840, no=0, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.011 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.014 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 1.068 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 1.099 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:28 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway8_8.prism ./case-studies/hallway.props -prop 2
+
+Parsing model file "./case-studies/hallway8_8.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ G !"damaged" ]
+
+Building model...
+
+Computing reachable states... 163840 states
+Reachable states exploration and model construction done in 1.584 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.821 seconds.
+
+Type:        SMG
+States:      163840 (1 initial)
+Transitions: 727040
+Choices:     409600
+Max/avg:     5/2.50
+
+Starting probabilistic reachability...
+Starting Prob0 (minmax)...
+Prob0 (minmax) took 2 iterations and 0.176 seconds.
+Starting Prob1 (minmax)...
+Prob1 (minmax) took 4 iterations and 0.078 seconds.
+target=81920, yes=81920, no=65536, maybe=16384
+Player 1: min
+Player 2: max
+Starting Adame value iteration...
+took 1 iterations and 0.019 seconds.
+Starting value iteration (minmax)...
+Value iteration (minmax) took 2 iterations and 0.03 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.378 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.44 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:31 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway10_10.prism ./case-studies/hallway.props -prop 1
+
+Parsing model file "./case-studies/hallway10_10.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ F "saved" ]
+
+Building model...
+
+Computing reachable states... 321547 400000 states
+Reachable states exploration and model construction done in 3.85 secs.
+Sorting reachable states list...
+
+Time for model construction: 4.542 seconds.
+
+Type:        SMG
+States:      400000 (1 initial)
+Transitions: 1788800
+Choices:     1008000
+Max/avg:     5/2.52
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 23 iterations and 1.191 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 23 iterations and 1.487 seconds.
+target=4000, yes=400000, no=0, maybe=0
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.009 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1 iterations and 0.01 seconds.
+Adame's method and value iteration give the same results.
+Probabilistic reachability took 2.74 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 2.77 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:39 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/hallway10_10.prism ./case-studies/hallway.props -prop 2
+
+Parsing model file "./case-studies/hallway10_10.prism"...
+
+Type:        SMG
+Modules:     agent human 
+Variables:   turn x y look dmg s1 a b s2 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/hallway.props"...
+
+2 properties:
+(1) <<1>>Pmax=? [ F "saved" ]
+(2) <<1>>Pmax=? [ G !"damaged" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1>>Pmax=? [ G !"damaged" ]
+
+Building model...
+
+Computing reachable states... 317459 400000 states
+Reachable states exploration and model construction done in 3.906 secs.
+Sorting reachable states list...
+
+Time for model construction: 4.556 seconds.
+
+Type:        SMG
+States:      400000 (1 initial)
+Transitions: 1788800
+Choices:     1008000
+Max/avg:     5/2.52
+
+Starting probabilistic reachability...
+Starting Prob0 (minmax)...
+Prob0 (minmax) took 2 iterations and 0.104 seconds.
+Starting Prob1 (minmax)...
+Prob1 (minmax) took 4 iterations and 0.298 seconds.
+target=200000, yes=200000, no=160000, maybe=40000
+Player 1: min
+Player 2: max
+Starting Adame value iteration...
+took 1 iterations and 0.016 seconds.
+Starting value iteration (minmax)...
+Value iteration (minmax) took 2 iterations and 0.047 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.491 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.607 seconds.
+
+Result: 1.0 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:45 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/cdmsnMEC.prism ./case-studies/cdmsn.props
+
+Parsing model file "./case-studies/cdmsnMEC.prism"...
+
+Type:        SMG
+Modules:     player0 player1 player2 player3 
+Variables:   confidence1 confidence2 confidence3 preference1 preference2 preference3 sched state 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/cdmsn.props"...
+
+1 property:
+(1) <<p1>>Pmax=? [ F all_prefer_1 ]
+
+---------------------------------------------------------------------
+
+Model checking: <<p1>>Pmax=? [ F all_prefer_1 ]
+
+Building model...
+
+Computing reachable states... 1244 states
+Reachable states exploration and model construction done in 0.108 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.137 seconds.
+
+Type:        SMG
+States:      1244 (1 initial)
+Transitions: 6250
+Choices:     2066
+Max/avg:     2/1.66
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 9 iterations and 0.006 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 25 iterations and 0.017 seconds.
+target=32, yes=1240, no=1, maybe=3
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.001 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 36 iterations and 0.002 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.035 seconds.
+
+Value in the initial state: 0.4999996185302734
+
+Time for model checking: 0.044 seconds.
+
+Result: 0.4999996185302734 (+/- 3.814697265291933E-6 estimated; rel err 7.629400351354398E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:46 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/ManyMecs.prism ./case-studies/ManyMecs.props -const N=100
+
+Parsing model file "./case-studies/ManyMecs.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/ManyMecs.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=100
+
+Building model...
+Model constants: N=100
+
+Computing reachable states... 302 states
+Reachable states exploration and model construction done in 0.039 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.05 seconds.
+
+Type:        SMG
+States:      302 (1 initial)
+Transitions: 902
+Choices:     602
+Max/avg:     2/1.99
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 201 iterations and 0.029 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 203 iterations and 0.024 seconds.
+target=1, yes=1, no=1, maybe=300
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.001 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 691 iterations and 0.082 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.145 seconds.
+
+Value in the initial state: 0.4999970407068775
+
+Time for model checking: 0.151 seconds.
+
+Result: 0.4999970407068775 (+/- 4.916026262595419E-6 estimated; rel err 9.832110717386089E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:47 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/ManyMecs.prism ./case-studies/ManyMecs.props -const N=1000
+
+Parsing model file "./case-studies/ManyMecs.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/ManyMecs.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=1000
+
+Building model...
+Model constants: N=1000
+
+Computing reachable states... 3002 states
+Reachable states exploration and model construction done in 0.11 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.139 seconds.
+
+Type:        SMG
+States:      3002 (1 initial)
+Transitions: 9002
+Choices:     6002
+Max/avg:     2/2.00
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 2001 iterations and 0.41 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 2003 iterations and 0.501 seconds.
+target=1, yes=1, no=1, maybe=3000
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.003 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 5529 iterations and 1.125 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 2.046 seconds.
+
+Value in the initial state: 0.4999921667069014
+
+Time for model checking: 2.054 seconds.
+
+Result: 0.4999921667069014 (+/- 4.9786171621585284E-6 estimated; rel err 9.957390322630846E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:21:50 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/ManyMecs.prism ./case-studies/ManyMecs.props -const N=10000
+
+Parsing model file "./case-studies/ManyMecs.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/ManyMecs.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=10000
+
+Building model...
+Model constants: N=10000
+
+Computing reachable states... 30002 states
+Reachable states exploration and model construction done in 0.338 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.41 seconds.
+
+Type:        SMG
+States:      30002 (1 initial)
+Transitions: 90002
+Choices:     60002
+Max/avg:     2/2.00
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 20001 iterations and 46.661 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 20003 iterations and 56.141 seconds.
+target=1, yes=1, no=1, maybe=30000
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.015 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 10000 iterations and 33.737 seconds.
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:07 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/BigMec.prism ./case-studies/BigMec.props -const N=100
+
+Parsing model file "./case-studies/BigMec.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/BigMec.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=100
+
+Building model...
+Model constants: N=100
+
+Computing reachable states... 203 states
+Reachable states exploration and model construction done in 0.033 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.048 seconds.
+
+Type:        SMG
+States:      203 (1 initial)
+Transitions: 406
+Choices:     404
+Max/avg:     2/1.99
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 102 iterations and 0.018 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 104 iterations and 0.009 seconds.
+target=1, yes=1, no=1, maybe=201
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.001 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 102 iterations and 0.017 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.059 seconds.
+
+Value in the initial state: 0.4
+
+Time for model checking: 0.065 seconds.
+
+Result: 0.4 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:09 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/BigMec.prism ./case-studies/BigMec.props -const N=1000
+
+Parsing model file "./case-studies/BigMec.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/BigMec.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=1000
+
+Building model...
+Model constants: N=1000
+
+Computing reachable states... 2003 states
+Reachable states exploration and model construction done in 0.072 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.09 seconds.
+
+Type:        SMG
+States:      2003 (1 initial)
+Transitions: 4006
+Choices:     4004
+Max/avg:     2/2.00
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 1002 iterations and 0.145 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 1004 iterations and 0.161 seconds.
+target=1, yes=1, no=1, maybe=2001
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.003 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 1002 iterations and 0.139 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.455 seconds.
+
+Value in the initial state: 0.4
+
+Time for model checking: 0.46 seconds.
+
+Result: 0.4 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:10 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/BigMec.prism ./case-studies/BigMec.props -const N=10000
+
+Parsing model file "./case-studies/BigMec.prism"...
+
+Type:        SMG
+Modules:     player1 player2 
+Variables:   state i 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/BigMec.props"...
+
+1 property:
+(1) <<P1>>Pmax=? [ F "p1win" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<P1>>Pmax=? [ F "p1win" ]
+Model constants: N=10000
+
+Building model...
+Model constants: N=10000
+
+Computing reachable states... 20003 states
+Reachable states exploration and model construction done in 0.261 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.341 seconds.
+
+Type:        SMG
+States:      20003 (1 initial)
+Transitions: 40006
+Choices:     40004
+Max/avg:     2/2.00
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 10002 iterations and 9.775 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 10004 iterations and 11.948 seconds.
+target=1, yes=1, no=1, maybe=20001
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.015 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 10000 iterations and 14.74 seconds.
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:47 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/haddad-monmege-SG.pm ./case-studies/haddad-monmege.prctl -const 'N=30,p=0.5'
+
+Parsing model file "./case-studies/haddad-monmege-SG.pm"...
+
+Type:        SMG
+Modules:     main 
+Variables:   x 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/haddad-monmege.prctl"...
+
+1 property:
+(1) "target": Pmax=? [ F "Target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "target": Pmax=? [ F "Target" ]
+Model constants: N=30,p=0.5
+
+Building model...
+Model constants: N=30,p=0.5
+
+Computing reachable states... 61 states
+Reachable states exploration and model construction done in 0.012 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.021 seconds.
+
+Type:        SMG
+States:      61 (1 initial)
+Transitions: 120
+Choices:     61
+Max/avg:     1/1.00
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmax)...
+Prob0 (maxmax) took 32 iterations and 0.003 seconds.
+Starting Prob1 (maxmax)...
+Prob1 (maxmax) took 991 iterations and 0.027 seconds.
+target=1, yes=1, no=1, maybe=59
+Player 1: max
+Player 2: max
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmax)...
+Value iteration (maxmax) took 10000 iterations and 0.055 seconds.
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:48 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/adt-infect.prism ./case-studies/adt-infect.props -prop 2
+
+Parsing model file "./case-studies/adt-infect.prism"...
+
+Type:        SMG
+Modules:     attacker 
+Variables:   s doSE doUSB doRAV doRC doEF success_t_SU success_t_VF success_Root 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/adt-infect.props"...
+
+3 properties:
+(1) <<a>>P>=0.03 [ F "success" ]
+(2) <<a>>Pmax=? [ F "success" ]
+(3) <<a>>R{"success"}max=? [ F "end" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<a>>Pmax=? [ F "success" ]
+
+Building model...
+
+Computing reachable states... 305 states
+Reachable states exploration and model construction done in 0.026 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.037 seconds.
+
+Warning: Deadlocks detected and fixed in 80 states
+
+Type:        SMG
+States:      305 (1 initial)
+Transitions: 384
+Choices:     366
+Max/avg:     4/1.20
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 9 iterations and 0.004 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 13 iterations and 0.003 seconds.
+target=12, yes=24, no=238, maybe=43
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 8 iterations and 0.002 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.014 seconds.
+
+Value in the initial state: 0.022950000000000005
+
+Time for model checking: 0.019 seconds.
+
+Result: 0.022950000000000005 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:50 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/two_investors.prism ./case-studies/two_investors.props -prop 4
+
+Parsing model file "./case-studies/two_investors.prism"...
+
+Type:        SMG
+Modules:     sched investor1 investor2 market probability cap 
+Variables:   term t m1 m2 i1 i2 b1 b2 v p c 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/two_investors.props"...
+
+4 properties:
+(1) <<investor1,investor2>>R{"profit12"}max=? [ Fc "done" ]
+(2) <<investor1>>R{"profit1"}max=? [ Fc ("done1"&"done2") ]
+(3) <<investor1,market>>R{"profit1"}max=? [ Fc "done1" ]
+(4) <<investor1>>Pmax=? [ F ("done1"&v>5) ]
+
+---------------------------------------------------------------------
+
+Model checking: <<investor1>>Pmax=? [ F ("done1"&v>5) ]
+
+Building model...
+
+Computing reachable states... 172240 states
+Reachable states exploration and model construction done in 1.225 secs.
+Sorting reachable states list...
+
+Time for model construction: 1.456 seconds.
+
+Type:        SMG
+States:      172240 (1 initial)
+Transitions: 373669
+Choices:     230767
+Max/avg:     3/1.34
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 61 iterations and 0.705 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 71 iterations and 0.878 seconds.
+target=5720, yes=7795, no=104669, maybe=59776
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.02 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 249 iterations and 1.67 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 3.298 seconds.
+
+Value in the initial state: 0.480298005
+
+Time for model checking: 3.374 seconds.
+
+Result: 0.480298005 (+/- 4.27479846146931E-6 estimated; rel err 8.900304429682797E-6)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:55 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/coins.prism ./case-studies/coins.props -prop 1
+
+Parsing model file "./case-studies/coins.prism"...
+
+Type:        SMG
+Modules:     scheduler player1 player2 
+Variables:   sched coin guess 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/coins.props"...
+
+18 properties:
+(1) <<1,2,3>>Pmax=? [ F "correct" ]
+(2) <<2,3>>Pmax=? [ F "correct" ]
+(3) <<1,2>>Pmax=? [ F "correct" ]
+(4) <<1,3>>Pmax=? [ F "correct" ]
+(5) <<1>>Pmax=? [ F "correct" ]
+(6) <<1,2,3>>R{"correct_guess"}max=? [ F "correct" ]
+(7) <<2,3>>R{"correct_guess"}max=? [ F "correct" ]
+(8) <<1,2>>R{"correct_guess"}max=? [ F "correct" ]
+(9) <<1,3>>R{"correct_guess"}max=? [ F "correct" ]
+(10) <<1>>R{"correct_guess"}max=? [ F "correct" ]
+(11) <<2,3>>R{"correct_guess"}max=? [ F0 "correct" ]
+(12) <<2>>R{"correct_guess"}max=? [ F0 "correct" ]
+(13) <<3>>R{"correct_guess"}max=? [ F0 "correct" ]
+(14) <<1>>R{"correct_guess"}max=? [ F0 "correct" ]
+(15) <<2,3>>R{"correct_guess"}max=? [ Fc "correct" ]
+(16) <<2>>R{"correct_guess"}max=? [ Fc "correct" ]
+(17) <<3>>R{"correct_guess"}max=? [ Fc "correct" ]
+(18) <<1>>R{"correct_guess"}max=? [ Fc "correct" ]
+
+---------------------------------------------------------------------
+
+Model checking: <<1,2,3>>Pmax=? [ F "correct" ]
+
+Building model...
+
+Computing reachable states... 19 states
+Reachable states exploration and model construction done in 0.008 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.017 seconds.
+
+Type:        SMG
+States:      19 (1 initial)
+Transitions: 26
+Choices:     22
+Max/avg:     2/1.16
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 5 iterations and 0.001 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 18 iterations and 0.001 seconds.
+target=2, yes=9, no=6, maybe=4
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.0 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 4 iterations and 0.002 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.01 seconds.
+
+Value in the initial state: 0.75
+
+Time for model checking: 0.014 seconds.
+
+Result: 0.75 (exact floating point)
+
+PRISM-games
+===========
+
+Version: 3.1.dev (based on PRISM 4.7.dev)
+Date: Mon Apr 17 16:24:56 CEST 2023
+Hostname: abdelaziz-Yoga-7-14ITL5
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism-games ./case-studies/prisoners_dilemma.prism ./case-studies/prisoners_dilemma.props -prop 9
+
+Parsing model file "./case-studies/prisoners_dilemma.prism"...
+
+Type:        SMG
+Modules:     scheduler agent1 agent2 agent3 
+Variables:   turn outcome s1 s2 s3 
+
+Switching to explicit engine, which supports SMGs...
+
+Parsing properties file "./case-studies/prisoners_dilemma.props"...
+
+12 properties:
+(1) <<ag1,ag3,sched,ag2>>R{"Coalition123"}max=? [ Fc target ]
+(2) <<ag1,ag3,sched,ag2>>R{"Coalition123"}min=? [ Fc target ]
+(3) <<ag1,sched,ag2>>R{"Coalition12"}max=? [ Fc target ]
+(4) <<ag1,sched,ag2>>R{"Coalition12"}min=? [ Fc target ]
+(5) <<ag1,ag2>>R{"Coalition12"}max=? [ Fc target ]
+(6) <<ag1,ag2>>R{"Coalition12"}min=? [ Fc target ]
+(7) <<ag1>>R{"Coalition1"}max=? [ Fc target ]
+(8) <<ag1>>R{"Coalition1"}min=? [ Fc target ]
+(9) <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
+(10) <<ag1,ag2>>Pmax=? [ F cooperating|defecting ]
+(11) <<ag1,sched,ag2>>Pmax=? [ F cooperating|defecting ]
+(12) <<1>>P>=0.5 [ target U !target ]
+
+---------------------------------------------------------------------
+
+Model checking: <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
+
+Building model...
+
+Computing reachable states... 102 states
+Reachable states exploration and model construction done in 0.019 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.027 seconds.
+
+Type:        SMG
+States:      102 (1 initial)
+Transitions: 153
+Choices:     137
+Max/avg:     3/1.34
+
+Starting probabilistic reachability...
+Starting Prob0 (maxmin)...
+Prob0 (maxmin) took 8 iterations and 0.002 seconds.
+Starting Prob1 (maxmin)...
+Prob1 (maxmin) took 20 iterations and 0.002 seconds.
+target=12, yes=20, no=56, maybe=26
+Player 1: max
+Player 2: min
+Starting Adame value iteration...
+took 1 iterations and 0.001 seconds.
+Starting value iteration (maxmin)...
+Value iteration (maxmin) took 8 iterations and 0.002 seconds.
+Adame's method and value iteration give different results.
+Probabilistic reachability took 0.014 seconds.
+
+Value in the initial state: 0.3333333333333333
+
+Time for model checking: 0.02 seconds.
+
+Result: 0.3333333333333333 (exact floating point)
+
