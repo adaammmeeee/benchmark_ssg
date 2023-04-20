@@ -62,10 +62,14 @@ os.system("(cd ./prism-games/prism/ && make)")
 
 
 os.system("rm print")
+max = len(models)
+cpt = 1
 for e in models:
     cmd = path + " " + models[e]
-    os.system(cmd+ " > print")
-    print("One model done")
+    os.system(cmd + " >> print")
+    print("Model ", cpt ," done " , max-cpt ," models remaining")
+    cpt += 1
+
 
 #cmd = path + " " + models["adt"]
 #os.system(cmd)
