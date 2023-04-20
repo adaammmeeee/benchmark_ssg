@@ -58,9 +58,14 @@ models["prison_dil"]="./case-studies/prisoners_dilemma.prism ./case-studies/pris
 #models["ManyAct4"]="./case-studies/randomModels/maxi-requested/RANDOM_SIZE_20000_MODEL_03_ACTIONS_4.prism ./random-generated-models/generatedModels/models.props"
 #models["ManyAct10"]="./case-studies/randomModels/maxi-requested/RANDOM_SIZE_40000_MODEL_10_ACTIONS_10.prism ./random-generated-models/generatedModels/models.props"
 
+os.system("(cd ./prism-games/prism/ && make)")
+
+
+os.system("rm print")
 for e in models:
     cmd = path + " " + models[e]
-    os.system(cmd)
+    os.system(cmd+ " > print")
+    print("One model done")
 
 #cmd = path + " " + models["adt"]
 #os.system(cmd)

@@ -567,6 +567,7 @@ public class STPGModelChecker extends ProbModelChecker
 		double final_val = 0;
 		double my_val = 0;
 		double prob;
+		prob = 1.0;
 		int successor;
 		iters = 0;
 		boolean done = false;
@@ -577,31 +578,37 @@ public class STPGModelChecker extends ProbModelChecker
 		 { 
 			for (i = 0; i < n; i++) {
 				if (unknown.get(i)) {
-					//mainLog.println("We are in state " + i);
+					final_val = 0;
+					mainLog.println("We are in state " + i);
+
 					ni = stpg.getNumChoices(i);
+					mainLog.println("Nombre de choix : " + ni);
 					for (j = 0; j < ni; j++) {
-						it = stpg.getTransitionsIterator(i, j);
 						my_val = 0;
+						it = stpg.getTransitionsIterator(i, j);
 						while (it.hasNext()) {
 							Entry<Integer, Double> e = it.next();
 							successor = e.getKey();
 							prob = e.getValue();
 							my_val += prob * soln[successor];
 							//we print the result
-							//mainLog.println("Choice " + j + " we go to state " + successor + " which has value "+ soln[successor]  + " with probability " + prob);
+							mainLog.println("Choice " + j + " we go to state " + successor + " which has value "+ soln[successor]  + " with probability " + prob);
+							mainLog.println("My val is currently : " + my_val);
 						}						
 						
-						//mainLog.println("We have to choose between " + final_val + " and " + my_val);
-						if (ni == 1)
+						mainLog.println("We have to choose between " + final_val + " and " + my_val);
+						if (j < 1)
+						{
 							final_val = my_val;
+						}
 						else
 							final_val = stpg.choseValue(i, final_val, my_val, min1, min2);
-						final_val = 0;
+
 
 
 						
 					}
-					/* 
+					
 					if (stpg.getPlayer(i) == 0) {
 						String s = min1 ? "min" : "max";
 						mainLog.println("Final value for state " + i + " is " + final_val + " for player " + s);
@@ -610,21 +617,22 @@ public class STPGModelChecker extends ProbModelChecker
 						String s = min2 ? "min" : "max";
 						mainLog.println("Final value for state " + i + " is " + final_val + " for player " + s);
 					}
-					*/
+					
 					soln2[i] = final_val;
 					//
 				}
 				
 			}
 			// On affiche le vecteur solution
-			/*mainLog.println("Solution :");
+			/* 
+			mainLog.println("Solution :");
 			for (i = 0; i < 107; i++) {
 				if (unknown.get(i))
 				{
 					mainLog.println("State " + i + " : " + soln2[i]);
 				}
-			}*/
-
+			}
+			*/
 
 			iters += 1;
 			done = PrismUtils.doublesAreClose(soln, soln2, termCritParam, termCrit == TermCrit.ABSOLUTE);
@@ -640,7 +648,7 @@ public class STPGModelChecker extends ProbModelChecker
 
 
 		// On affiche le vecteur solution
-		/* 
+		 
 		mainLog.println("Solution :");
 		for (i = 0; i < n; i++) {
 			if (unknown.get(i))
@@ -648,7 +656,7 @@ public class STPGModelChecker extends ProbModelChecker
 				mainLog.println("State Adame" + i + " : " + soln2[i]);
 			}
 		}
-		*/
+		
 
 	
 
@@ -811,15 +819,15 @@ public class STPGModelChecker extends ProbModelChecker
 			out.close();
 		}
 		// we print the result 
-		/*
 		
+		 
 		mainLog.println("Result:");
 		for (i = 0; i < n; i++) {
 			
 			if (unknown.get(i)) {
 				mainLog.println(i + " " + soln[i]);
 			}
-		}*/
+		}
 		
 		
 		
