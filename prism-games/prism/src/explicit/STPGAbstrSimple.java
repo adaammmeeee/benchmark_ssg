@@ -1023,6 +1023,8 @@ public class STPGAbstrSimple extends ModelExplicit implements STPG, NondetModelS
 		return true;
 	}
 
+	
+
 	/**
 	 * Simple test program
 	 */

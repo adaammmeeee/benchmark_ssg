@@ -27,6 +27,10 @@
 
 package explicit;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Iterator;
@@ -37,14 +41,16 @@ import java.util.Random;
 import java.util.Map.Entry;
 import java.util.zip.Inflater;
 
+import javax.swing.text.html.parser.Element;
+
 import acceptance.AcceptanceReach;
 import common.IterableBitSet;
 import explicit.rewards.MDPRewardsSimple;
 import explicit.rewards.STPGRewards;
 import explicit.rewards.STPGRewardsSimple;
 import explicit.rewards.StateRewardsConstant;
-import parma_polyhedra_library.MIP_Problem_Status;
-import parma_polyhedra_library.Variable_Stringifier;
+//import parma_polyhedra_library.MIP_Problem_Status;
+//import parma_polyhedra_library.Variable_Stringifier;
 import parser.ast.Expression;
 import prism.AccuracyFactory;
 import prism.PrismComponent;
@@ -327,41 +333,64 @@ public class STPGModelChecker extends ProbModelChecker {
 			// Compute probabilities
 			switch (solnMethod) {
 				case VALUE_ITERATION:
-					soln = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, init, known);
-					// On affiche soln :
-					mainLog.println("Voici soln pour l'iteration de valeur: ");
-					for (int i = 0; i < soln.length; i++) {
-						mainLog.println("soln[" + i + "] = " + soln[i]);
-					}
-					
-
-
-					int[] set_to_compute_false = new int[n];
-					// On prend des sommets aléatoires qui ne sont pas des sommets de yes, no ou
-					// known
-					int nb_sommets = 0;
-					for (int i = 0; i < n; i++) {
-						if (!yes.get(i) && !no.get(i) && (known == null || !known.get(i))) {
-							set_to_compute_false[nb_sommets] = i;
-							nb_sommets++;
+					// fixGraph(stpg, true);
+					writeListinFile(stpg, true);
+					// On affiche les sommets puits 
+					mainLog.println("Voici les sommets puits : ");
+					for (int i = 0; i < stpg.getNumStates(); i++) {
+						if (yes.get(i) == true || no.get(i) == true) {
+							mainLog.println("Sommet puits : " + i);
+						}
+						if (yes.get(i) == true && no.get(i) == true) {
+							mainLog.println("Sommet puits : " + i + " est à la fois dans yes et no");
+						}
+						// On affiche les sommets controlés par les joueurs
+						if (stpg.getPlayer(i) == 0) {
+							mainLog.println("Sommet " + i + " est controlé par le joueur 0");
+						} else {
+							mainLog.println("Sommet " + i + " est controlé par le joueur 1");
 						}
 					}
-					
-					int [] set_to_compute = new int[nb_sommets/4];
-					for (int i = 0; i < nb_sommets/4; i++) {
-						set_to_compute[i] = set_to_compute_false[i];
-					}
-					
+					 
+					// soln = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, init, known);
+					// On affiche soln :
+					/*
+					 * mainLog.println("Voici soln pour l'iteration de valeur: ");
+					 * for (i = 0; i < soln.length; i++) {
+					 * mainLog.println("soln[" + i + "] = " + soln[i]);
+					 * }
+					 */
 
-					
+
 					res = computeReachProbsValIter(stpg, no, yes, min1, min2, init, known);
-					if (PrismUtils.doublesAreClose(soln, res.soln, termCritParam, termCrit == TermCrit.ABSOLUTE))
-						mainLog.println("Adame's method and value iteration give the same results.");
-					else
-						mainLog.println("Adame's method and value iteration give different results.");
 
-					soln = computeReachProbsDichotomy(stpg, no, yes, min1, min2, init, known, set_to_compute, 0.001);
+					Boolean print_test = false;
+					if (print_test) {
+						int i;
+						int[] set_to_compute_false = new int[n];
+						// On prend des sommets aléatoires qui ne sont pas des sommets de yes, no ou
+						// known
+						int nb_sommets = 0;
+						for (i = 0; i < n; i++) {
+							if (!yes.get(i) && !no.get(i) && (known == null || !known.get(i))) {
+								set_to_compute_false[nb_sommets] = i;
+								nb_sommets++;
+							}
+						}
 
+						int[] set_to_compute = new int[nb_sommets / 4];
+						for (i = 0; i < nb_sommets / 4; i++) {
+							set_to_compute[i] = set_to_compute_false[i];
+						}
+						soln = computeReachProbsDichotomy(stpg, no, yes, min1, min2, init, known, set_to_compute,
+								0.001);
+						// On affiche soln :
+
+						mainLog.println("Voici soln pour la dichotomie: ");
+						for (i = 0; i < soln.length; i++) {
+							mainLog.println("soln[" + i + "] = " + soln[i]);
+						}
+					}
 					break;
 				case GAUSS_SEIDEL:
 					mainLog.println("Gauss-Seidel is not supported for STPGs, using value iteration instead.");
@@ -387,11 +416,254 @@ public class STPGModelChecker extends ProbModelChecker {
 			mainLog.println("Probabilistic reachability took " + timer / 1000.0 + " seconds.");
 
 		// Update time taken
-		res.timeTaken = timer / 1000.0;
-		res.timeProb0 = timerProb0 / 1000.0;
-		res.timePre = (timerProb0 + timerProb1) / 1000.0;
+		//res.timeTaken = timer / 1000.0;
+		//res.timeProb0 = timerProb0 / 1000.0;
+		//res.timePre = (timerProb0 + timerProb1) / 1000.0;
 
 		return res;
+	}
+
+	/**
+	 * Prend une liste d'adjacence en paramètre et fixe des sommets aléatoirement
+	 * pour essayer d'obtenir un type de graphe intéressant
+	 * 
+	 * @param stpg
+	 * @param print
+	 * @return
+	 */
+	public void fixGraph(STPG stpg, boolean print) {
+
+		ArrayList<ArrayList<Integer>> list = convertSTPGtoList(stpg, false);
+		// On génére 100 sommets aléatoires
+		int nb_fixed = 0;
+		if (stpg.getNumStates() < 100) {
+			nb_fixed = stpg.getNumStates();
+		} else {
+			nb_fixed = 100;
+		}
+		int[] states = new int[nb_fixed];
+		for (int i = 0; i < nb_fixed; i++) {
+			states[i] = (int) (Math.random() * stpg.getNumStates());
+			list.get(states[i]).clear();
+		}
+		if (isOnePlayer(stpg, false)) {
+			if (print) {
+				mainLog.println("Le graphe est un joueur en fixant les états ");
+				for (int i = 0; i < nb_fixed; i++) {
+					mainLog.println(states[i]);
+				}
+			}
+		}
+		if (isTree(stpg, false)) {
+			if (print) {
+				mainLog.println("Le graphe est un arbre en fixant les états ");
+				for (int i = 0; i < nb_fixed; i++) {
+					mainLog.println(states[i]);
+				}
+			}
+		}
+
+	}
+
+	/**
+	 * Prend un STPG en paramètre, et écris dans un fichier sa liste d'adjacence, en faisant apparaître les sommets average implicite
+	 * si with_average est à true alors les sommets average sont écrits explicitement
+	 * 
+	 * @param stpg
+	 * @param double_or_int
+	 * @return
+	 */
+
+	public void writeListinFile(STPG stpg, boolean with_average) {
+		mainLog.println("Ecriture de la liste d'adjacence dans le fichier list.txt");
+		// On supprime d'abord le fichier s'il existe déjà
+		File file = new File("list.txt");
+		if (file.exists()) {
+			file.delete();
+		}
+		
+		
+		if (!with_average)
+		{
+			ArrayList<ArrayList<Integer>> list = convertSTPGtoList(stpg, false);
+			try {
+				FileWriter myWriter = new FileWriter("list.txt");
+				for (int i = 0; i < list.size(); i++) {
+					myWriter.write(i + " ");
+					for (int j = 0; j < list.get(i).size(); j++) {
+						myWriter.write(list.get(i).get(j) + " ");
+					}
+					myWriter.write("\n");
+				}
+				myWriter.close();
+			} catch (IOException e) {
+				System.out.println("An error occurred.");
+				e.printStackTrace();
+			}
+		}
+		else 
+		{
+			ArrayList<ArrayList<Double>> list = convertSTPGtoListWithAverage(stpg);
+			try {
+				FileWriter myWriter = new FileWriter("list.txt");
+				for (int i = 0; i < list.size(); i++) {
+					myWriter.write(i + " ");
+					for (int j = 0; j < list.get(i).size(); j++) {
+						myWriter.write(list.get(i).get(j) + " ");
+					}
+					myWriter.write("\n");
+				}
+				myWriter.close();
+			} catch (IOException e) {
+				System.out.println("An error occurred.");
+				e.printStackTrace();
+			}
+		}
+
+
+	}
+
+	/**
+	 * Prend un STPG en paramètre et renvoi la liste d'adjacence qui lui
+	 * correspond
+	 * 
+	 * @param stpg
+	 * @param print
+	 * @return adjency list
+	 */
+
+	public ArrayList<ArrayList<Integer>> convertSTPGtoList(STPG stpg, boolean print) {
+		int n, i, j, ni, successor;
+		n = stpg.getNumStates();
+		// On transforme le stpg en liste d'adjacence
+		Iterator<Entry<Integer, Double>> it;
+		ArrayList<ArrayList<Integer>> list;
+		list = new ArrayList<>();
+
+		for (i = 0; i < n; i++) {
+			list.add(new ArrayList<Integer>());
+			ni = stpg.getNumChoices(i);
+			if (print)
+				mainLog.println("State " + i);
+			for (j = 0; j < ni; j++) {
+				it = stpg.getTransitionsIterator(i, j);
+				while (it.hasNext()) {
+					Entry<Integer, Double> e = it.next();
+					successor = e.getKey();
+					list.get(i).add(successor);
+					if (print)
+						mainLog.println("Choice " + j + " we go to state " + successor);
+				}
+			}
+		}
+		// On affiche la liste d'adjacence
+		if (print) {
+			mainLog.println("Voici la liste d'adjacence : ");
+			for (i = 0; i < n; i++) {
+				mainLog.println("State " + i);
+				for (j = 0; j < list.get(i).size(); j++) {
+					mainLog.println("We go to state " + list.get(i).get(j));
+				}
+			}
+		}
+		return list;
+	}
+
+
+	/**
+	 * Prend un STPG en paramètre et renvoi la liste d'adjacence avec les sommet average révélés qui lui
+	 * correspond
+	 * 
+	 * @param stpg
+	 * @param print
+	 * @return adjency list
+	 */
+
+	 public ArrayList<ArrayList<Double>> convertSTPGtoListWithAverage(STPG stpg) {
+		int n, i, j, ni;
+		double prob, successor;
+		n = stpg.getNumStates();
+		// On transforme le stpg en liste d'adjacence
+		Iterator<Entry<Integer, Double>> it;
+		ArrayList<ArrayList<Double>> list;
+		list = new ArrayList<>();
+
+		for (i = 0; i < n; i++) {
+			list.add(new ArrayList<Double>());
+			ni = stpg.getNumChoices(i);
+			for (j = 0; j < ni; j++) {
+				it = stpg.getTransitionsIterator(i, j);
+				list.get(i).add(-1.0);
+				while (it.hasNext()) {
+					Entry<Integer, Double> e = it.next();
+					prob = e.getValue();
+					successor = e.getKey();
+					list.get(i).add(prob);
+					list.get(i).add(successor);
+				}
+			}
+		}
+		// On affiche la liste d'adjacence
+		return list;
+	}
+
+	/**
+	 * Prend une liste d'adjacence en paramètre et renvoi true si le graphe est
+	 * un arbre, false sinon
+	 *
+	 * @param stpg
+	 * @param n
+	 * @return true if the graph is a tree, false otherwise
+	 */
+	public boolean isTree(STPG stpg, boolean print) {
+		ArrayList<ArrayList<Integer>> list = convertSTPGtoList(stpg, false);
+		int i;
+		int n = stpg.getNumStates();
+		int nb_arcs = 0;
+		for (i = 0; i < n; i++) {
+			nb_arcs += list.get(i).size();
+		}
+
+		if (nb_arcs == n - 1) {
+			if (print)
+				mainLog.println("The graph is a tree");
+			return true;
+		}
+		if (print)
+			mainLog.println("The graph is not a tree");
+		return false;
+	}
+	/**
+	 * Prend un STPG en paramètre et renvoi true si le jeu est à un joueur, false
+	 * sinon
+	 * 
+	 * @param stpg
+	 * @param print
+	 * @return true if the game is one player, false otherwise
+	 */
+	public boolean isOnePlayer(STPG stpg, boolean print) {
+		int cptplayer1, cptplayer2, i, n;
+		cptplayer1 = 0;
+		cptplayer2 = 0;
+		n = stpg.getNumStates();
+		for (i = 0; i < n; i++) {
+			if (stpg.getPlayer(i) == 0) {
+				cptplayer1++;
+			} else {
+				cptplayer2++;
+			}
+		}
+		if (print)
+			mainLog.println("Player 1 has " + cptplayer1 + " states, player 2 has " + cptplayer2 + " states");
+
+		if (cptplayer1 == 0 || cptplayer2 == 0) {
+			if (print)
+				mainLog.println("The game is one player");
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 	/**
@@ -606,7 +878,7 @@ public class STPGModelChecker extends ProbModelChecker {
 		for (i = 0; i < n; i++) {
 			mainLog.println("soln[" + i + "] = " + soln[i]);
 		}
-	
+
 		return soln;
 
 	}
@@ -617,29 +889,25 @@ public class STPGModelChecker extends ProbModelChecker {
 		double borne_sup = 1.0;
 		double borne_inf = 0.0;
 		double borne_mid = (borne_inf + borne_sup) / 2;
-		int ni, i, j,k;
+		int ni, i, j, k;
 		int n = stpg.getNumStates();
 		double soln1[] = new double[n];
 		// Condition d'arrêt
 		// On met l'execution en pause pour pouvoir voir les résultats
-		
-		
 
 		if (set_to_compute.length == 0) {
 			// Alors on résoud le reste du jeu avec un oracle (par exemple l'itération de
 			// valeur)
-			
+
 			BitSet set_to_computebit = new BitSet(n);
 			for (k = 0; k < set_to_compute_original.length; k++) {
 				set_to_computebit.set(set_to_compute_original[k]);
 			}
-			
 
 			soln1 = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, soln, set_to_computebit);
 			// On affiche le vecteur solution
 			for (j = 0; j < soln.length; j++) {
-				if (unknow.get(j))
-				{
+				if (unknow.get(j)) {
 					soln[j] = soln1[j];
 				}
 			}
@@ -705,7 +973,6 @@ public class STPGModelChecker extends ProbModelChecker {
 			soln[state] = (borne_inf + borne_sup) / 2;
 		}
 	}
-
 
 	/**
 	 * Compute reachability probabilities using value iteration.
@@ -779,7 +1046,7 @@ public class STPGModelChecker extends ProbModelChecker {
 				if (unknown.get(i)) {
 					final_val = 0;
 					// mainLog.println("We are in state " + i);
-
+					// mainLog.println("Controlled by player " + stpg.getPlayer(i));
 					ni = stpg.getNumChoices(i);
 					// mainLog.println("Nombre de choix : " + ni);
 					for (j = 0; j < ni; j++) {

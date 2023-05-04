@@ -2,274 +2,108 @@ PRISM-games
 ===========
 
 Version: 3.1.dev (based on PRISM 4.7.dev)
-Date: Thu Apr 20 16:06:17 CEST 2023
+Date: Sat Apr 29 15:40:58 CEST 2023
 Hostname: adame-HP-Pavilion-Laptop-15-eg0xxx
 Memory limits: cudd=1g, java(heap)=1g
-Command line: prism-games ./case-studies/prisoners_dilemma.prism ./case-studies/prisoners_dilemma.props -prop 9
+Command line: prism-games ./case-studies/coins.prism ./case-studies/coins.props -prop 1
 
-Parsing model file "./case-studies/prisoners_dilemma.prism"...
+Parsing model file "./case-studies/coins.prism"...
 
 Type:        SMG
-Modules:     scheduler agent1 agent2 agent3 
-Variables:   turn outcome s1 s2 s3 
+Modules:     scheduler player1 player2 
+Variables:   sched coin guess 
 
 Switching to explicit engine, which supports SMGs...
 
-Parsing properties file "./case-studies/prisoners_dilemma.props"...
+Parsing properties file "./case-studies/coins.props"...
 
-12 properties:
-(1) <<ag1,ag3,sched,ag2>>R{"Coalition123"}max=? [ Fc target ]
-(2) <<ag1,ag3,sched,ag2>>R{"Coalition123"}min=? [ Fc target ]
-(3) <<ag1,sched,ag2>>R{"Coalition12"}max=? [ Fc target ]
-(4) <<ag1,sched,ag2>>R{"Coalition12"}min=? [ Fc target ]
-(5) <<ag1,ag2>>R{"Coalition12"}max=? [ Fc target ]
-(6) <<ag1,ag2>>R{"Coalition12"}min=? [ Fc target ]
-(7) <<ag1>>R{"Coalition1"}max=? [ Fc target ]
-(8) <<ag1>>R{"Coalition1"}min=? [ Fc target ]
-(9) <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
-(10) <<ag1,ag2>>Pmax=? [ F cooperating|defecting ]
-(11) <<ag1,sched,ag2>>Pmax=? [ F cooperating|defecting ]
-(12) <<1>>P>=0.5 [ target U !target ]
+18 properties:
+(1) <<1,2,3>>Pmax=? [ F "correct" ]
+(2) <<2,3>>Pmax=? [ F "correct" ]
+(3) <<1,2>>Pmax=? [ F "correct" ]
+(4) <<1,3>>Pmax=? [ F "correct" ]
+(5) <<1>>Pmax=? [ F "correct" ]
+(6) <<1,2,3>>R{"correct_guess"}max=? [ F "correct" ]
+(7) <<2,3>>R{"correct_guess"}max=? [ F "correct" ]
+(8) <<1,2>>R{"correct_guess"}max=? [ F "correct" ]
+(9) <<1,3>>R{"correct_guess"}max=? [ F "correct" ]
+(10) <<1>>R{"correct_guess"}max=? [ F "correct" ]
+(11) <<2,3>>R{"correct_guess"}max=? [ F0 "correct" ]
+(12) <<2>>R{"correct_guess"}max=? [ F0 "correct" ]
+(13) <<3>>R{"correct_guess"}max=? [ F0 "correct" ]
+(14) <<1>>R{"correct_guess"}max=? [ F0 "correct" ]
+(15) <<2,3>>R{"correct_guess"}max=? [ Fc "correct" ]
+(16) <<2>>R{"correct_guess"}max=? [ Fc "correct" ]
+(17) <<3>>R{"correct_guess"}max=? [ Fc "correct" ]
+(18) <<1>>R{"correct_guess"}max=? [ Fc "correct" ]
 
 ---------------------------------------------------------------------
 
-Model checking: <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
+Model checking: <<1,2,3>>Pmax=? [ F "correct" ]
 
 Building model...
 
-Computing reachable states... 102 states
-Reachable states exploration and model construction done in 0.018 secs.
+Computing reachable states... 19 states
+Reachable states exploration and model construction done in 0.008 secs.
 Sorting reachable states list...
 
-Time for model construction: 0.027 seconds.
+Time for model construction: 0.016 seconds.
 
 Type:        SMG
-States:      102 (1 initial)
-Transitions: 153
-Choices:     137
-Max/avg:     3/1.34
+States:      19 (1 initial)
+Transitions: 26
+Choices:     22
+Max/avg:     2/1.16
 
 Starting probabilistic reachability...
 Starting Prob0 (maxmin)...
-Prob0 (maxmin) took 8 iterations and 0.003 seconds.
+Prob0 (maxmin) took 5 iterations and 0.002 seconds.
 Starting Prob1 (maxmin)...
-Prob1 (maxmin) took 20 iterations and 0.002 seconds.
-target=12, yes=20, no=56, maybe=26
-Voici soln pour l'iteration de valeur: 
-soln[0] = 0.3333333333333333
-soln[1] = 1.0
-soln[2] = 0.3333333333333333
-soln[3] = 0.3333333333333333
-soln[4] = 1.0
-soln[5] = 0.3333333333333333
-soln[6] = 0.0
-soln[7] = 0.3333333333333333
-soln[8] = 0.0
-soln[9] = 0.3333333333333333
-soln[10] = 1.0
-soln[11] = 0.3333333333333333
-soln[12] = 0.3333333333333333
-soln[13] = 1.0
-soln[14] = 0.3333333333333333
-soln[15] = 0.0
-soln[16] = 0.3333333333333333
-soln[17] = 0.0
-soln[18] = 0.0
-soln[19] = 0.3333333333333333
-soln[20] = 0.0
-soln[21] = 0.0
-soln[22] = 0.3333333333333333
-soln[23] = 0.0
-soln[24] = 0.0
-soln[25] = 0.0
-soln[26] = 0.0
-soln[27] = 1.0
-soln[28] = 1.0
-soln[29] = 0.0
-soln[30] = 0.0
-soln[31] = 0.0
-soln[32] = 0.0
-soln[33] = 0.0
-soln[34] = 0.0
-soln[35] = 1.0
-soln[36] = 0.0
-soln[37] = 1.0
-soln[38] = 0.0
-soln[39] = 0.0
-soln[40] = 0.0
-soln[41] = 0.0
-soln[42] = 0.0
-soln[43] = 1.0
-soln[44] = 0.0
-soln[45] = 0.0
-soln[46] = 0.0
-soln[47] = 1.0
-soln[48] = 0.0
-soln[49] = 0.0
-soln[50] = 0.0
-soln[51] = 0.3333333333333333
-soln[52] = 1.0
-soln[53] = 0.3333333333333333
-soln[54] = 0.3333333333333333
-soln[55] = 1.0
-soln[56] = 0.3333333333333333
-soln[57] = 0.0
-soln[58] = 0.3333333333333333
-soln[59] = 0.0
-soln[60] = 0.3333333333333333
-soln[61] = 1.0
-soln[62] = 0.3333333333333333
-soln[63] = 0.3333333333333333
-soln[64] = 1.0
-soln[65] = 0.3333333333333333
-soln[66] = 0.0
-soln[67] = 0.3333333333333333
-soln[68] = 0.0
-soln[69] = 1.0
-soln[70] = 1.0
-soln[71] = 0.0
-soln[72] = 0.0
-soln[73] = 0.0
-soln[74] = 0.0
-soln[75] = 0.0
-soln[76] = 0.0
-soln[77] = 1.0
-soln[78] = 0.0
-soln[79] = 1.0
-soln[80] = 0.0
-soln[81] = 0.0
-soln[82] = 0.0
-soln[83] = 0.0
-soln[84] = 0.0
-soln[85] = 1.0
-soln[86] = 0.0
-soln[87] = 0.0
-soln[88] = 0.0
-soln[89] = 1.0
-soln[90] = 0.0
-soln[91] = 0.0
-soln[92] = 0.0
-soln[93] = 0.3333333333333333
-soln[94] = 0.3333333333333333
-soln[95] = 0.0
-soln[96] = 0.3333333333333333
-soln[97] = 0.3333333333333333
-soln[98] = 0.0
-soln[99] = 0.0
-soln[100] = 0.0
-soln[101] = 0.0
+Prob1 (maxmin) took 18 iterations and 0.001 seconds.
+target=2, yes=9, no=6, maybe=4
+Ecriture de la liste d'adjacence dans le fichier list.txt
+Voici les sommets puits : 
+Sommet 0 est controlé par le joueur 0
+Sommet puits : 1
+Sommet 1 est controlé par le joueur 0
+Sommet 2 est controlé par le joueur 0
+Sommet 3 est controlé par le joueur 0
+Sommet puits : 4
+Sommet 4 est controlé par le joueur 0
+Sommet puits : 5
+Sommet 5 est controlé par le joueur 0
+Sommet puits : 6
+Sommet 6 est controlé par le joueur 0
+Sommet puits : 7
+Sommet 7 est controlé par le joueur 0
+Sommet 8 est controlé par le joueur 0
+Sommet puits : 9
+Sommet 9 est controlé par le joueur 0
+Sommet puits : 10
+Sommet 10 est controlé par le joueur 0
+Sommet puits : 11
+Sommet 11 est controlé par le joueur 0
+Sommet puits : 12
+Sommet 12 est controlé par le joueur 0
+Sommet puits : 13
+Sommet 13 est controlé par le joueur 0
+Sommet puits : 14
+Sommet 14 est controlé par le joueur 0
+Sommet puits : 15
+Sommet 15 est controlé par le joueur 0
+Sommet puits : 16
+Sommet 16 est controlé par le joueur 0
+Sommet puits : 17
+Sommet 17 est controlé par le joueur 0
+Sommet puits : 18
+Sommet 18 est controlé par le joueur 0
 Starting value iteration (maxmin)...
-Value iteration (maxmin) took 8 iterations and 0.001 seconds.
-Adame's method and value iteration give the same results.
-Starting dichotomy...
-Solution de la dichotomie: 
-soln[0] = 0.33251953125
-soln[1] = 1.0
-soln[2] = 0.33349609375
-soln[3] = 0.33349609375
-soln[4] = 1.0
-soln[5] = 0.33349609375
-soln[6] = 0.0
-soln[7] = 0.33349609375
-soln[8] = 0.0
-soln[9] = 0.33349609375
-soln[10] = 1.0
-soln[11] = 0.3333333333333333
-soln[12] = 0.3333333333333333
-soln[13] = 1.0
-soln[14] = 0.3333333333333333
-soln[15] = 0.0
-soln[16] = 0.3333333333333333
-soln[17] = 0.0
-soln[18] = 0.0
-soln[19] = 0.3333333333333333
-soln[20] = 0.0
-soln[21] = 0.0
-soln[22] = 0.3333333333333333
-soln[23] = 0.0
-soln[24] = 0.0
-soln[25] = 0.0
-soln[26] = 0.0
-soln[27] = 1.0
-soln[28] = 1.0
-soln[29] = 0.0
-soln[30] = 0.0
-soln[31] = 0.0
-soln[32] = 0.0
-soln[33] = 0.0
-soln[34] = 0.0
-soln[35] = 1.0
-soln[36] = 0.0
-soln[37] = 1.0
-soln[38] = 0.0
-soln[39] = 0.0
-soln[40] = 0.0
-soln[41] = 0.0
-soln[42] = 0.0
-soln[43] = 1.0
-soln[44] = 0.0
-soln[45] = 0.0
-soln[46] = 0.0
-soln[47] = 1.0
-soln[48] = 0.0
-soln[49] = 0.0
-soln[50] = 0.0
-soln[51] = 0.3330078125
-soln[52] = 1.0
-soln[53] = 0.3333333333333333
-soln[54] = 0.3333333333333333
-soln[55] = 1.0
-soln[56] = 0.3333333333333333
-soln[57] = 0.0
-soln[58] = 0.3333333333333333
-soln[59] = 0.0
-soln[60] = 0.3330078125
-soln[61] = 1.0
-soln[62] = 0.3330078125
-soln[63] = 0.3333333333333333
-soln[64] = 1.0
-soln[65] = 0.3333333333333333
-soln[66] = 0.0
-soln[67] = 0.3333333333333333
-soln[68] = 0.0
-soln[69] = 1.0
-soln[70] = 1.0
-soln[71] = 0.0
-soln[72] = 0.0
-soln[73] = 0.0
-soln[74] = 0.0
-soln[75] = 0.0
-soln[76] = 0.0
-soln[77] = 1.0
-soln[78] = 0.0
-soln[79] = 1.0
-soln[80] = 0.0
-soln[81] = 0.0
-soln[82] = 0.0
-soln[83] = 0.0
-soln[84] = 0.0
-soln[85] = 1.0
-soln[86] = 0.0
-soln[87] = 0.0
-soln[88] = 0.0
-soln[89] = 1.0
-soln[90] = 0.0
-soln[91] = 0.0
-soln[92] = 0.0
-soln[93] = 0.3330078125
-soln[94] = 0.3330078125
-soln[95] = 0.0
-soln[96] = 0.3333333333333333
-soln[97] = 0.3333333333333333
-soln[98] = 0.0
-soln[99] = 0.0
-soln[100] = 0.0
-soln[101] = 0.0
-Probabilistic reachability took 2.018 seconds.
+Value iteration (maxmin) took 4 iterations and 0.001 seconds.
+Probabilistic reachability took 0.011 seconds.
 
-Value in the initial state: 0.3333333333333333
+Value in the initial state: 0.75
 
-Time for model checking: 2.026 seconds.
+Time for model checking: 0.015 seconds.
 
-Result: 0.3333333333333333 (exact floating point)
+Result: 0.75 (exact floating point)
 
