@@ -2,108 +2,70 @@ PRISM-games
 ===========
 
 Version: 3.1.dev (based on PRISM 4.7.dev)
-Date: Sat Apr 29 15:40:58 CEST 2023
+Date: Tue May 16 09:59:12 CEST 2023
 Hostname: adame-HP-Pavilion-Laptop-15-eg0xxx
 Memory limits: cudd=1g, java(heap)=1g
-Command line: prism-games ./case-studies/coins.prism ./case-studies/coins.props -prop 1
+Command line: prism-games ./case-studies/prisoners_dilemma.prism ./case-studies/prisoners_dilemma.props -prop 9
 
-Parsing model file "./case-studies/coins.prism"...
+Parsing model file "./case-studies/prisoners_dilemma.prism"...
 
 Type:        SMG
-Modules:     scheduler player1 player2 
-Variables:   sched coin guess 
+Modules:     scheduler agent1 agent2 agent3 
+Variables:   turn outcome s1 s2 s3 
 
 Switching to explicit engine, which supports SMGs...
 
-Parsing properties file "./case-studies/coins.props"...
+Parsing properties file "./case-studies/prisoners_dilemma.props"...
 
-18 properties:
-(1) <<1,2,3>>Pmax=? [ F "correct" ]
-(2) <<2,3>>Pmax=? [ F "correct" ]
-(3) <<1,2>>Pmax=? [ F "correct" ]
-(4) <<1,3>>Pmax=? [ F "correct" ]
-(5) <<1>>Pmax=? [ F "correct" ]
-(6) <<1,2,3>>R{"correct_guess"}max=? [ F "correct" ]
-(7) <<2,3>>R{"correct_guess"}max=? [ F "correct" ]
-(8) <<1,2>>R{"correct_guess"}max=? [ F "correct" ]
-(9) <<1,3>>R{"correct_guess"}max=? [ F "correct" ]
-(10) <<1>>R{"correct_guess"}max=? [ F "correct" ]
-(11) <<2,3>>R{"correct_guess"}max=? [ F0 "correct" ]
-(12) <<2>>R{"correct_guess"}max=? [ F0 "correct" ]
-(13) <<3>>R{"correct_guess"}max=? [ F0 "correct" ]
-(14) <<1>>R{"correct_guess"}max=? [ F0 "correct" ]
-(15) <<2,3>>R{"correct_guess"}max=? [ Fc "correct" ]
-(16) <<2>>R{"correct_guess"}max=? [ Fc "correct" ]
-(17) <<3>>R{"correct_guess"}max=? [ Fc "correct" ]
-(18) <<1>>R{"correct_guess"}max=? [ Fc "correct" ]
+12 properties:
+(1) <<ag1,ag3,sched,ag2>>R{"Coalition123"}max=? [ Fc target ]
+(2) <<ag1,ag3,sched,ag2>>R{"Coalition123"}min=? [ Fc target ]
+(3) <<ag1,sched,ag2>>R{"Coalition12"}max=? [ Fc target ]
+(4) <<ag1,sched,ag2>>R{"Coalition12"}min=? [ Fc target ]
+(5) <<ag1,ag2>>R{"Coalition12"}max=? [ Fc target ]
+(6) <<ag1,ag2>>R{"Coalition12"}min=? [ Fc target ]
+(7) <<ag1>>R{"Coalition1"}max=? [ Fc target ]
+(8) <<ag1>>R{"Coalition1"}min=? [ Fc target ]
+(9) <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
+(10) <<ag1,ag2>>Pmax=? [ F cooperating|defecting ]
+(11) <<ag1,sched,ag2>>Pmax=? [ F cooperating|defecting ]
+(12) <<1>>P>=0.5 [ target U !target ]
 
 ---------------------------------------------------------------------
 
-Model checking: <<1,2,3>>Pmax=? [ F "correct" ]
+Model checking: <<ag1,sched,ag2>>Pmax=? [ F cooperating ]
 
 Building model...
 
-Computing reachable states... 19 states
-Reachable states exploration and model construction done in 0.008 secs.
+Computing reachable states... 102 states
+Reachable states exploration and model construction done in 0.021 secs.
 Sorting reachable states list...
 
-Time for model construction: 0.016 seconds.
+Time for model construction: 0.034 seconds.
 
 Type:        SMG
-States:      19 (1 initial)
-Transitions: 26
-Choices:     22
-Max/avg:     2/1.16
+States:      102 (1 initial)
+Transitions: 153
+Choices:     137
+Max/avg:     3/1.34
 
 Starting probabilistic reachability...
 Starting Prob0 (maxmin)...
-Prob0 (maxmin) took 5 iterations and 0.002 seconds.
+Prob0 (maxmin) took 8 iterations and 0.005 seconds.
 Starting Prob1 (maxmin)...
-Prob1 (maxmin) took 18 iterations and 0.001 seconds.
-target=2, yes=9, no=6, maybe=4
+Prob1 (maxmin) took 20 iterations and 0.002 seconds.
+target=12, yes=20, no=56, maybe=26
 Ecriture de la liste d'adjacence dans le fichier list.txt
-Voici les sommets puits : 
-Sommet 0 est controlé par le joueur 0
-Sommet puits : 1
-Sommet 1 est controlé par le joueur 0
-Sommet 2 est controlé par le joueur 0
-Sommet 3 est controlé par le joueur 0
-Sommet puits : 4
-Sommet 4 est controlé par le joueur 0
-Sommet puits : 5
-Sommet 5 est controlé par le joueur 0
-Sommet puits : 6
-Sommet 6 est controlé par le joueur 0
-Sommet puits : 7
-Sommet 7 est controlé par le joueur 0
-Sommet 8 est controlé par le joueur 0
-Sommet puits : 9
-Sommet 9 est controlé par le joueur 0
-Sommet puits : 10
-Sommet 10 est controlé par le joueur 0
-Sommet puits : 11
-Sommet 11 est controlé par le joueur 0
-Sommet puits : 12
-Sommet 12 est controlé par le joueur 0
-Sommet puits : 13
-Sommet 13 est controlé par le joueur 0
-Sommet puits : 14
-Sommet 14 est controlé par le joueur 0
-Sommet puits : 15
-Sommet 15 est controlé par le joueur 0
-Sommet puits : 16
-Sommet 16 est controlé par le joueur 0
-Sommet puits : 17
-Sommet 17 est controlé par le joueur 0
-Sommet puits : 18
-Sommet 18 est controlé par le joueur 0
+On a ecrit le fichier
+null
+Ecriture des informations sur les joueurs dans le fichier info.txt
 Starting value iteration (maxmin)...
-Value iteration (maxmin) took 4 iterations and 0.001 seconds.
-Probabilistic reachability took 0.011 seconds.
+Value iteration (maxmin) took 8 iterations and 0.003 seconds.
+Probabilistic reachability took 0.036 seconds.
 
-Value in the initial state: 0.75
+Value in the initial state: 0.3333333333333333
 
-Time for model checking: 0.015 seconds.
+Time for model checking: 0.046 seconds.
 
-Result: 0.75 (exact floating point)
+Result: 0.3333333333333333 (exact floating point)
 

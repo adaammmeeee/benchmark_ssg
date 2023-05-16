@@ -1,4 +1,7 @@
 import os
+import signal
+import subprocess
+import time
 
 path = "./prism-games/prism/bin/prism "
 
@@ -53,6 +56,7 @@ models["adt"]="./case-studies/adt-infect.prism ./case-studies/adt-infect.props -
 models["two_investors"]="./case-studies/two_investors.prism ./case-studies/two_investors.props -prop 4"
 models["coins"]="./case-studies/coins.prism ./case-studies/coins.props -prop 1"
 models["prison_dil"]="./case-studies/prisoners_dilemma.prism ./case-studies/prisoners_dilemma.props -prop 9"
+#models["islip"] = "./case-studies/islip.prism ./case_studies/islip.props"
 
 #models["ManyAct7"]="./case-studies/randomModels/maxi-requested/RANDOM_SIZE_20000_MODEL_02_ACTIONS_7.prism ./random-generated-models/generatedModels/models.props"
 #models["ManyAct4"]="./case-studies/randomModels/maxi-requested/RANDOM_SIZE_20000_MODEL_03_ACTIONS_4.prism ./random-generated-models/generatedModels/models.props"
@@ -61,15 +65,52 @@ models["prison_dil"]="./case-studies/prisoners_dilemma.prism ./case-studies/pris
 os.system("(cd ./prism-games/prism/ && make)")
 
 
-os.system("rm print")
-max = len(models)
-cpt = 1
-for e in models:
-    cmd = path + " " + models[e]
-    os.system(cmd + " >> print")
-    print("Model ", cpt ," done " , max-cpt ," models remaining")
-    cpt += 1
+val = 2
+if (val == 1):
+    os.system("rm print")
+    max = len(models)
+    cpt = 1
+    for e in models:
+        cmd = path + " " + models[e]
+        os.system(cmd + " > print")
+        os.system("python3 analyse.py > ./graph_info/"+ str(e))
+        #os.system("(cd ./Fluid && cargo run --release < ../undirected_graph.gr > ../results_treedepth/"+ str(e) +"_treedepth)")
+        #os.system("./DreyFVS/build/DFVS < directed_graph.gr > ./result_FVS/"+ str(e) +"_FVS")
+        print("Model ", cpt ," done " , max-cpt ," models remaining")
+        cpt += 1
+if (val == 2):
+    os.system("rm print")
+    cmd = path + " " + models["prison_dil"]
+    os.system(cmd + " > print")
+    os.system("python3 analyse.py")
 
+if (val == 3):
+
+
+    f = open("./tableau_final.csv", "w")
+    f.write("nom , nb_max , nb_min , nb_average , sinks min , sinks max , treedepth , FVS\n" )
+    f.close()
+
+    for e in models:
+        nb_noeud = 0
+        nb_edge = 0
+        td = 0
+        Fvs = 0
+        with open("./graph_info/"+ str(e), "r") as f:
+            first_line = f.readline()
+            tab = [int(s) for s in first_line.split() if s.isdigit()]
+        
+        with open("./results_treedepth/" + str(e) + "_treedepth") as f:
+            first_line = f.readline()
+            td = int(first_line)
+
+        with open("./result_FVS/" + str(e) + "_FVS") as f:
+            Fvs = len(f.readlines())
+
+        with open("./tableau_final.csv", "a") as f:
+            f.write(str(e) + "," + str(tab[0]) + "," + str(tab[1]) + "," + str(tab[2]) + "," + str(tab[3]) + "," +  str(tab[4]) + "," + str(td) + "," + str(Fvs) + "\n" )
+
+        
 
 #cmd = path + " " + models["adt"]
 #os.system(cmd)

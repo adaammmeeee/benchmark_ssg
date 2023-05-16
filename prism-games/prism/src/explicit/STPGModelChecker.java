@@ -27,6 +27,7 @@
 
 package explicit;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -335,23 +336,10 @@ public class STPGModelChecker extends ProbModelChecker {
 				case VALUE_ITERATION:
 					// fixGraph(stpg, true);
 					writeListinFile(stpg, true);
-					// On affiche les sommets puits 
-					mainLog.println("Voici les sommets puits : ");
-					for (int i = 0; i < stpg.getNumStates(); i++) {
-						if (yes.get(i) == true || no.get(i) == true) {
-							mainLog.println("Sommet puits : " + i);
-						}
-						if (yes.get(i) == true && no.get(i) == true) {
-							mainLog.println("Sommet puits : " + i + " est à la fois dans yes et no");
-						}
-						// On affiche les sommets controlés par les joueurs
-						if (stpg.getPlayer(i) == 0) {
-							mainLog.println("Sommet " + i + " est controlé par le joueur 0");
-						} else {
-							mainLog.println("Sommet " + i + " est controlé par le joueur 1");
-						}
-					}
-					 
+					mainLog.println("On a ecrit le fichier");
+					mainLog.println(known);
+					info_player(stpg, target, yes, no, known , min1, min2);
+
 					// soln = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, init, known);
 					// On affiche soln :
 					/*
@@ -360,7 +348,6 @@ public class STPGModelChecker extends ProbModelChecker {
 					 * mainLog.println("soln[" + i + "] = " + soln[i]);
 					 * }
 					 */
-
 
 					res = computeReachProbsValIter(stpg, no, yes, min1, min2, init, known);
 
@@ -416,58 +403,106 @@ public class STPGModelChecker extends ProbModelChecker {
 			mainLog.println("Probabilistic reachability took " + timer / 1000.0 + " seconds.");
 
 		// Update time taken
-		//res.timeTaken = timer / 1000.0;
-		//res.timeProb0 = timerProb0 / 1000.0;
-		//res.timePre = (timerProb0 + timerProb1) / 1000.0;
+		// res.timeTaken = timer / 1000.0;
+		// res.timeProb0 = timerProb0 / 1000.0;
+		// res.timePre = (timerProb0 + timerProb1) / 1000.0;
 
 		return res;
 	}
 
 	/**
-	 * Prend une liste d'adjacence en paramètre et fixe des sommets aléatoirement
-	 * pour essayer d'obtenir un type de graphe intéressant
+	 * Prend un stpg en paramètre et écrit dans un fichier info.txt chaque sommet et
+	 * qui les controles 0 si c'est le joueur min, 1 si c'est le joueur max et 2 si
+	 * c'est un puit
 	 * 
 	 * @param stpg
+	 * @param target
 	 * @param print
 	 * @return
 	 */
-	public void fixGraph(STPG stpg, boolean print) {
+	public void info_player(STPG stpg, BitSet target, BitSet yes, BitSet no, BitSet known, boolean min1, boolean min2) {
+		mainLog.println("Ecriture des informations sur les joueurs dans le fichier info.txt");
+		// On supprime d'abord le fichier s'il existe déjà
+		File file = new File("info.txt");
+		if (file.exists()) {
+			file.delete();
+		}
 
-		ArrayList<ArrayList<Integer>> list = convertSTPGtoList(stpg, false);
-		// On génére 100 sommets aléatoires
-		int nb_fixed = 0;
-		if (stpg.getNumStates() < 100) {
-			nb_fixed = stpg.getNumStates();
-		} else {
-			nb_fixed = 100;
-		}
-		int[] states = new int[nb_fixed];
-		for (int i = 0; i < nb_fixed; i++) {
-			states[i] = (int) (Math.random() * stpg.getNumStates());
-			list.get(states[i]).clear();
-		}
-		if (isOnePlayer(stpg, false)) {
-			if (print) {
-				mainLog.println("Le graphe est un joueur en fixant les états ");
-				for (int i = 0; i < nb_fixed; i++) {
-					mainLog.println(states[i]);
+		try {
+			FileWriter myWriter = new FileWriter("info.txt");
+			int nb_connu = 0;
+			for (int i = 0; i < stpg.getNumStates(); i++) {
+				if (yes.get(i))
+					nb_connu++;
+			}
+			for (int i = 0; i < stpg.getNumStates(); i++) {
+				if (no.get(i))
+					nb_connu++;
+			}
+			
+			myWriter.write(nb_connu + "\n");
+		
+			for (int i = 0; i < stpg.getNumStates(); i++) {
+				
+				BitSet myself = new BitSet(stpg.getNumStates());
+				myself.set(i);
+				if (stpg.allSuccessorsInSet(i, myself) || target.get(i)) {
+					int val = -1;
+					if (yes.get(i))
+						val = 1;
+					else if (no.get(i))
+						val = 0;
+					else
+						val = -1;
+					if (yes.get(i))
+						myWriter.write(i + " sink " + val + "\n");
+					else if (no.get(i))
+						myWriter.write(i + " sink " + val + "\n");
+					else 
+						myWriter.write(i + " error\n");
+				} 
+				else if (stpg.getPlayer(i) == 0) {
+					int val = -1;
+					if (yes.get(i))
+						val = 1;
+					else if (no.get(i))
+						val = 0;
+					else
+						val = -1;
+					if (min1)
+						myWriter.write(i + " min " + val + "\n");
+					else
+						myWriter.write(i + " max " + val + "\n");
+				}
+				else if (stpg.getPlayer(i) == 1) {
+					int val = -1;
+					if (yes.get(i))
+						val = 1;
+					else if (no.get(i))
+						val = 0;
+					else
+						val = -1;
+					if (min2)
+						myWriter.write(i + " min " + val + "\n");
+					else
+						myWriter.write(i + " max " + val + "\n");
 				}
 			}
-		}
-		if (isTree(stpg, false)) {
-			if (print) {
-				mainLog.println("Le graphe est un arbre en fixant les états ");
-				for (int i = 0; i < nb_fixed; i++) {
-					mainLog.println(states[i]);
-				}
-			}
+			myWriter.close();
+		} catch (
+
+		IOException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
 		}
 
 	}
 
 	/**
-	 * Prend un STPG en paramètre, et écris dans un fichier sa liste d'adjacence, en faisant apparaître les sommets average implicite
-	 * si with_average est à true alors les sommets average sont écrits explicitement
+	 * Prend un STPG en paramètre, et écris dans un fichier sa liste d'adjacence, en
+	 * faisant apparaître les sommets average implicite
+	 * si with_average est à true alors les sommets average sont écrits
+	 * explicitement
 	 * 
 	 * @param stpg
 	 * @param double_or_int
@@ -481,10 +516,8 @@ public class STPGModelChecker extends ProbModelChecker {
 		if (file.exists()) {
 			file.delete();
 		}
-		
-		
-		if (!with_average)
-		{
+
+		if (!with_average) {
 			ArrayList<ArrayList<Integer>> list = convertSTPGtoList(stpg, false);
 			try {
 				FileWriter myWriter = new FileWriter("list.txt");
@@ -500,9 +533,7 @@ public class STPGModelChecker extends ProbModelChecker {
 				System.out.println("An error occurred.");
 				e.printStackTrace();
 			}
-		}
-		else 
-		{
+		} else {
 			ArrayList<ArrayList<Double>> list = convertSTPGtoListWithAverage(stpg);
 			try {
 				FileWriter myWriter = new FileWriter("list.txt");
@@ -519,7 +550,6 @@ public class STPGModelChecker extends ProbModelChecker {
 				e.printStackTrace();
 			}
 		}
-
 
 	}
 
@@ -569,9 +599,9 @@ public class STPGModelChecker extends ProbModelChecker {
 		return list;
 	}
 
-
 	/**
-	 * Prend un STPG en paramètre et renvoi la liste d'adjacence avec les sommet average révélés qui lui
+	 * Prend un STPG en paramètre et renvoi la liste d'adjacence avec les sommet
+	 * average révélés qui lui
 	 * correspond
 	 * 
 	 * @param stpg
@@ -579,7 +609,7 @@ public class STPGModelChecker extends ProbModelChecker {
 	 * @return adjency list
 	 */
 
-	 public ArrayList<ArrayList<Double>> convertSTPGtoListWithAverage(STPG stpg) {
+	public ArrayList<ArrayList<Double>> convertSTPGtoListWithAverage(STPG stpg) {
 		int n, i, j, ni;
 		double prob, successor;
 		n = stpg.getNumStates();
@@ -633,6 +663,7 @@ public class STPGModelChecker extends ProbModelChecker {
 			mainLog.println("The graph is not a tree");
 		return false;
 	}
+
 	/**
 	 * Prend un STPG en paramètre et renvoi true si le jeu est à un joueur, false
 	 * sinon
