@@ -1,1 +1,1 @@
-Le graphe possède 2000 sommets max, 1000 sommets min, 3000 sommets average 1 sommets sink min et 1 sommets sink max
+nb_max =  2000 nb_min =  1000 nb_average =  2000 nb_sink_min =  0 nb_sink_max =  0

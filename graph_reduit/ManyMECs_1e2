@@ -1,0 +1,14 @@
+Nombre de puits fusionnés :  0
+Nombre de sommets fusionés :  100
+Le graphe possède 200 sommets max, 100 sommets min, 300 sommets average 1 sommets sink min et 1 sommets sink max
+Le graphe possède 200 sommets max, 100 sommets min, 200 sommets average 0 sommets sink min et 0 sommets sink max
+Le graphe a perdu  0 % de sommets max
+Le graphe a perdu  0 % de sommets min
+Le graphe a perdu  33 % de sommets average
+Le graphe a perdu  100 % de sommets sink
+nombre de sommets avant modification :  302
+nombre de sommets après modification :  500
+Par rapport au graphe original on a perdu  -198  sommets, soit  -65 % des sommets
+Le graphe n'est pas acyclique
+Le programme a mis 0.00882101058959961 secondes à s'exécuter
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 1]

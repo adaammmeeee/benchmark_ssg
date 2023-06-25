@@ -1,0 +1,13 @@
+Nombre de puits fusionnés :  0
+Nombre de sommets fusionés :  1
+Le graphe possède 59 sommets max, 0 sommets min, 59 sommets average 1 sommets sink min et 1 sommets sink max
+Le graphe possède 59 sommets max, 0 sommets min, 58 sommets average 0 sommets sink min et 0 sommets sink max
+Le graphe a perdu  0 % de sommets max
+Le graphe a perdu  1 % de sommets average
+Le graphe a perdu  100 % de sommets sink
+nombre de sommets avant modification :  61
+nombre de sommets après modification :  117
+Par rapport au graphe original on a perdu  -56  sommets, soit  -91 % des sommets
+Le graphe n'est pas acyclique
+Le programme a mis 0.0019354820251464844 secondes à s'exécuter
+[117]

@@ -1,0 +1,4 @@
+nb_max =  0 nb_min =  0 nb_average =  0 nb_sink_min =  0 nb_sink_max =  0
+Nombre de composantes fortement connexes :  0
+La résolution par itération de valeur a mis 3.266334533691406e-05 secondes à s'exécuter
+La resolution par composantes connexes a mis 2.8371810913085938e-05 secondes à s'exécuter

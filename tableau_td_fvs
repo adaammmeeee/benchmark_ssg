@@ -1,0 +1,56 @@
+\hline
+nom , nombre de sommet , treedepth , FVS, nombre de composante connexes
+\hline
+cdmsn& todo & 2 & 0 & todo2 \\
+\hline
+cloud5& todo & 175 & 260 & todo2 \\
+\hline
+cloud6& todo & 699 & 1088 & todo2 \\
+\hline
+mdsm1& todo & 442 & 0 & todo2 \\
+\hline
+mdsm2& todo & 2 & 0 & todo2 \\
+\hline
+AV10_10_1& todo & 0 & 0 & todo2 \\
+\hline
+AV10_10_2& todo & 2340 & 3207 & todo2 \\
+\hline
+AV15_15_1& todo & 0 & 0 & todo2 \\
+\hline
+AV15_15_2& todo & 9219 & 16088 & todo2 \\
+\hline
+charlton1& todo & 12 & 0 & todo2 \\
+\hline
+charlton2& todo & 23 & 23 & todo2 \\
+\hline
+dice10& todo & 17 & 0 & todo2 \\
+\hline
+dice20& todo & 19 & 0 & todo2 \\
+\hline
+dice50& todo & 20 & 0 & todo2 \\
+\hline
+dice50MEC& todo & 21 & 1 & todo2 \\
+\hline
+hallway5_5_1& todo & 2 & 1 & todo2 \\
+\hline
+hallway8_8_1& todo & 2 & 1 & todo2 \\
+\hline
+hallway10_10_1& todo & 2 & 1 & todo2 \\
+\hline
+cdmsnMEC& todo & 4 & 1 & todo2 \\
+\hline
+ManyMECs_1e1& todo & 7 & 10 & todo2 \\
+\hline
+ManyMECs_1e2& todo & 10 & 100 & todo2 \\
+\hline
+BigMec_1e1& todo & 6 & 10 & todo2 \\
+\hline
+hm_30_5& todo & 9 & 1 & todo2 \\
+\hline
+adt& todo & 10 & 0 & todo2 \\
+\hline
+two_investors& todo & 2701 & 1514 & todo2 \\
+\hline
+coins& todo & 4 & 0 & todo2 \\
+\hline
+prison_dil& todo & 8 & 0 & todo2 \\

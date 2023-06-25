@@ -1,0 +1,4 @@
+nb_max =  34 nb_min =  9 nb_average =  10 nb_sink_min =  1 nb_sink_max =  1
+Nombre de composantes fortement connexes :  55
+La résolution par itération de valeur a mis 0.003055572509765625 secondes à s'exécuter
+La resolution par composantes connexes a mis 0.0008571147918701172 secondes à s'exécuter

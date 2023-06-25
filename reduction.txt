@@ -1,0 +1,383 @@
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.44559585492227% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -59.375% de sommets sink
+Par rapport au graphe original on a perdu  -51  sommets
+Le programme a mis 0.043752431869506836 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 23.27261124325579% de sommets
+On a supprimé 33.205128205128204% de sommets max
+On a supprimé 66.66666666666667% de sommets min
+On a supprimé 91.4403870162297% de sommets average
+On a supprimé -222.38396045042572% de sommets sink
+Par rapport au graphe original on a perdu  -26451  sommets
+Le programme a mis 0.5209004878997803 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 18.241694190790753% de sommets
+On a supprimé 2.985739750445633% de sommets max
+On a supprimé 51.515151515151516% de sommets min
+On a supprimé 91.50817037235467% de sommets average
+On a supprimé -270.3604017593383% de sommets sink
+Par rapport au graphe original on a perdu  -126243  sommets
+Le programme a mis 2.9651222229003906 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 26.880689028106673% de sommets
+On a supprimé 48.30999262925134% de sommets max
+On a supprimé 5.750665778961385% de sommets min
+On a supprimé 43.75231249008933% de sommets average
+On a supprimé 15.245855968797883% de sommets sink
+Par rapport au graphe original on a perdu  -73180  sommets
+Le programme a mis 1.5729146003723145 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 76.82223754283945% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 19.219250592004457% de sommets sink
+Par rapport au graphe original on a perdu  -23197  sommets
+Le programme a mis 1.612281084060669 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 100.0% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 100.0% de sommets sink
+Par rapport au graphe original on a perdu  0  sommets
+Le programme a mis 2.615341901779175 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 72.65879242212924% de sommets
+On a supprimé 77.46553352219074% de sommets max
+On a supprimé 77.32225862988646% de sommets min
+On a supprimé 74.5407835581246% de sommets average
+On a supprimé -442.97597042513866% de sommets sink
+Par rapport au graphe original on a perdu  -37639  sommets
+Le programme a mis 2.700164318084717 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 46.40501510925151% de sommets
+On a supprimé 76.23703037794509% de sommets max
+On a supprimé 72.28897453336356% de sommets min
+On a supprimé 80.10918432883751% de sommets average
+On a supprimé -1.0269672607334945% de sommets sink
+Par rapport au graphe original on a perdu  -73781  sommets
+Le programme a mis 2.656069278717041 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 100.0% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 100.0% de sommets sink
+Par rapport au graphe original on a perdu  0  sommets
+Le programme a mis 12.872155666351318 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 72.36586557738572% de sommets
+On a supprimé 75.99232181605743% de sommets max
+On a supprimé 74.93249249450716% de sommets min
+On a supprimé 73.43481012658228% de sommets average
+On a supprimé -635.2058319039451% de sommets sink
+Par rapport au graphe original on a perdu  -176434  sommets
+Le programme a mis 14.001429557800293 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 47.30540797914996% de sommets
+On a supprimé 75.37325840454893% de sommets max
+On a supprimé 72.1223562431087% de sommets min
+On a supprimé 80.79177215189874% de sommets average
+On a supprimé -1.0950028279602089% de sommets sink
+Par rapport au graphe original on a perdu  -336436  sommets
+Le programme a mis 13.257969617843628 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 73.04075235109718% de sommets
+On a supprimé 89.26174496644295% de sommets max
+On a supprimé 71.29337539432177% de sommets min
+On a supprimé 83.2967032967033% de sommets average
+On a supprimé -108.33333333333333% de sommets sink
+Par rapport au graphe original on a perdu  -258  sommets
+Le programme a mis 0.010973453521728516 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 5.956112852664577% de sommets
+On a supprimé 12.751677852348994% de sommets max
+On a supprimé 17.94871794871795% de sommets min
+On a supprimé 13.406593406593407% de sommets average
+On a supprimé -4300.0% de sommets sink
+Par rapport au graphe original on a perdu  -900  sommets
+Le programme a mis 0.009030818939208984 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 94.38631790744466% de sommets
+On a supprimé 0.8695652173913043% de sommets max
+On a supprimé 97.91666666666667% de sommets min
+On a supprimé 52.17391304347826% de sommets average
+On a supprimé 97.43589743589743% de sommets sink
+Par rapport au graphe original on a perdu  -279  sommets
+Le programme a mis 0.04475569725036621 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 96.68221574344024% de sommets
+On a supprimé 0.425531914893617% de sommets max
+On a supprimé 98.80952380952381% de sommets min
+On a supprimé 51.06382978723404% de sommets average
+On a supprimé 98.55072463768116% de sommets sink
+Par rapport au graphe original on a perdu  -569  sommets
+Le programme a mis 0.24146127700805664 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.51481060997007% de sommets
+On a supprimé 0.16806722689075632% de sommets max
+On a supprimé 99.47916666666667% de sommets min
+On a supprimé 50.42016806722689% de sommets average
+On a supprimé 99.37106918238993% de sommets sink
+Par rapport au graphe original on a perdu  -1439  sommets
+Le programme a mis 1.4598610401153564 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.50872576034345% de sommets
+On a supprimé 0.16750418760469013% de sommets max
+On a supprimé 99.4770942272036% de sommets min
+On a supprimé 50.16722408026756% de sommets average
+On a supprimé 99.37108236724598% de sommets sink
+Par rapport au graphe original on a perdu  -1445  sommets
+Le programme a mis 1.3798654079437256 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 95.4% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -84.0% de sommets sink
+Par rapport au graphe original on a perdu  -1840  sommets
+Le programme a mis 0.9035820960998535 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 50.0% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 66.66666666666667% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -40.0% de sommets sink
+Par rapport au graphe original on a perdu  -20000  sommets
+Le programme a mis 0.9284570217132568 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.14453125% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -90.0% de sommets sink
+Par rapport au graphe original on a perdu  -4864  sommets
+Le programme a mis 6.71250319480896 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 50.0% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 66.66666666666667% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -40.0% de sommets sink
+Par rapport au graphe original on a perdu  -131072  sommets
+Le programme a mis 6.244308948516846 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.8% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 100.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -92.0% de sommets sink
+Par rapport au graphe original on a perdu  -7680  sommets
+Le programme a mis 15.395263195037842 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 50.0% de sommets
+On a supprimé 100.0% de sommets max
+On a supprimé 66.66666666666667% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé -40.0% de sommets sink
+Par rapport au graphe original on a perdu  -320000  sommets
+Le programme a mis 15.204078674316406 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 98.26642335766424% de sommets
+On a supprimé 99.66996699669967% de sommets max
+On a supprimé 99.83471074380165% de sommets min
+On a supprimé 99.95107632093934% de sommets average
+On a supprimé -60.60606060606061% de sommets sink
+Par rapport au graphe original on a perdu  -57  sommets
+Le programme a mis 0.053420305252075195 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.33222591362126247% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 0.6666666666666666% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -600  sommets
+Le programme a mis 0.006017446517944336 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.03332222592469177% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 0.06666666666666667% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -6000  sommets
+Le programme a mis 0.07115721702575684 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.0033332222259258026% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 0.006666666666666667% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -60000  sommets
+Le programme a mis 0.8401041030883789 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.975609756097561% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -203  sommets
+Le programme a mis 0.0029904842376708984 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.09975062344139651% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -2003  sommets
+Le programme a mis 0.01958465576171875 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 0.009997500624843789% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 0.0% de sommets sink
+Par rapport au graphe original on a perdu  -20003  sommets
+Le programme a mis 0.21446967124938965 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 1.6666666666666667% de sommets
+On a supprimé 0.0% de sommets max
+On a supprimé 0.0% de sommets average
+On a supprimé 100.0% de sommets sink
+Par rapport au graphe original on a perdu  -118  sommets
+Le programme a mis 0.0011835098266601562 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 75.23219814241486% de sommets
+On a supprimé 83.08457711442786% de sommets max
+On a supprimé 62.5% de sommets min
+On a supprimé 66.66666666666667% de sommets average
+On a supprimé 61.25% de sommets sink
+Par rapport au graphe original on a perdu  -80  sommets
+Le programme a mis 0.002961397171020508 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 57.217260011366434% de sommets
+On a supprimé 54.4060484387681% de sommets max
+On a supprimé 53.93117165803498% de sommets min
+On a supprimé 55.028170344024424% de sommets average
+On a supprimé 70.3586223221683% de sommets sink
+Par rapport au graphe original on a perdu  -100874  sommets
+Le programme a mis 4.205128908157349 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 65.21739130434783% de sommets
+On a supprimé 73.33333333333333% de sommets max
+On a supprimé 75.0% de sommets average
+On a supprimé 25.0% de sommets sink
+Par rapport au graphe original on a perdu  -8  sommets
+Le programme a mis 0.00041556358337402344 secondes à s'exécuter
+On commence le programme
+On a fini d'identifier les sommets
+On a fini de transformer les sommets en sinks
+On a fini de supprimer les sinks
+On a supprimé 61.81818181818182% de sommets
+On a supprimé 65.07936507936508% de sommets max
+On a supprimé 55.55555555555556% de sommets min
+On a supprimé 100.0% de sommets average
+On a supprimé 46.666666666666664% de sommets sink
+Par rapport au graphe original on a perdu  -42  sommets
+Le programme a mis 0.0011181831359863281 secondes à s'exécuter

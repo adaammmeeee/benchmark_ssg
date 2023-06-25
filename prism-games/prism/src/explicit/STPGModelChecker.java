@@ -338,17 +338,10 @@ public class STPGModelChecker extends ProbModelChecker {
 					writeListinFile(stpg, true);
 					mainLog.println("On a ecrit le fichier");
 					mainLog.println(known);
-					info_player(stpg, target, yes, no, known , min1, min2);
+					info_player(stpg, target, yes, no, known, min1, min2);
 
-					// soln = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, init, known);
-					// On affiche soln :
-					/*
-					 * mainLog.println("Voici soln pour l'iteration de valeur: ");
-					 * for (i = 0; i < soln.length; i++) {
-					 * mainLog.println("soln[" + i + "] = " + soln[i]);
-					 * }
-					 */
-
+					//soln = computeReachProbsValIterAdame(stpg, no, yes, min1, min2, init, known);
+			
 					res = computeReachProbsValIter(stpg, no, yes, min1, min2, init, known);
 
 					Boolean print_test = false;
@@ -439,11 +432,11 @@ public class STPGModelChecker extends ProbModelChecker {
 				if (no.get(i))
 					nb_connu++;
 			}
-			
+
 			myWriter.write(nb_connu + "\n");
-		
+
 			for (int i = 0; i < stpg.getNumStates(); i++) {
-				
+
 				BitSet myself = new BitSet(stpg.getNumStates());
 				myself.set(i);
 				if (stpg.allSuccessorsInSet(i, myself) || target.get(i)) {
@@ -458,10 +451,9 @@ public class STPGModelChecker extends ProbModelChecker {
 						myWriter.write(i + " sink " + val + "\n");
 					else if (no.get(i))
 						myWriter.write(i + " sink " + val + "\n");
-					else 
+					else
 						myWriter.write(i + " error\n");
-				} 
-				else if (stpg.getPlayer(i) == 0) {
+				} else if (stpg.getPlayer(i) == 0) {
 					int val = -1;
 					if (yes.get(i))
 						val = 1;
@@ -473,8 +465,7 @@ public class STPGModelChecker extends ProbModelChecker {
 						myWriter.write(i + " min " + val + "\n");
 					else
 						myWriter.write(i + " max " + val + "\n");
-				}
-				else if (stpg.getPlayer(i) == 1) {
+				} else if (stpg.getPlayer(i) == 1) {
 					int val = -1;
 					if (yes.get(i))
 						val = 1;
@@ -1296,15 +1287,14 @@ public class STPGModelChecker extends ProbModelChecker {
 		}
 		// we print the result
 
-		/*
-		 * mainLog.println("Result:");
-		 * for (i = 0; i < n; i++) {
-		 * 
-		 * if (unknown.get(i)) {
-		 * mainLog.println(i + " " + soln[i]);
-		 * }
-		 * }
-		 */
+		mainLog.println("Result:");
+		for (i = 0; i < n; i++) {
+		
+			
+			mainLog.println(i + " " + soln[i]);
+			
+		}
+		mainLog.println();
 
 		return res;
 	}

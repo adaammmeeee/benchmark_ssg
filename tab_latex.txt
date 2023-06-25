@@ -1,0 +1,108 @@
+\hline
+cdmsn & NON & 604 & 604 & 2041 & 32\\
+\cline{2-6}
+OUI & 0 & 0 & 5 & 1\\
+\hline
+cloud5 & NON & 780 & 780 & 25632 & 7282\\
+\cline{2-6}
+OUI & 521 & 260 & 1674 & 2\\
+\hline
+cloud6 & NON & 2244 & 2244 & 119456 & 30466\\
+\cline{2-6}
+OUI & 2177 & 1088 & 7968 & 2\\
+\hline
+mdsm1 & NON & 9497 & 24032 & 37838 & 28716\\
+\cline{2-6}
+OUI & 1771 & 16651 & 15519 & 2\\
+\hline
+mdsm2 & NON & 9496 & 24033 & 37838 & 28716\\
+\cline{2-6}
+OUI & 0 & 0 & 7 & 2\\
+\hline
+AV10_10_1 & NON & 53394 & 52932 & 31140 & 198\\
+\cline{2-6}
+OUI & 0 & 0 & 0 & 0\\
+\hline
+AV10_10_2 & NON & 52950 & 52492 & 31140 & 1082\\
+\cline{2-6}
+OUI & 11932 & 10160 & 7928 & 2\\
+\hline
+AV15_15_1 & NON & 240584 & 239432 & 158000 & 448\\
+\cline{2-6}
+OUI & 0 & 0 & 0 & 0\\
+\hline
+AV15_15_2 & NON & 239640 & 238492 & 158000 & 2332\\
+\cline{2-6}
+OUI & 57532 & 54860 & 41973 & 2\\
+\hline
+charlton1 & NON & 149 & 317 & 455 & 36\\
+\cline{2-6}
+OUI & 7 & 66 & 63 & 2\\
+\hline
+charlton2 & NON & 149 & 351 & 455 & 2\\
+\cline{2-6}
+OUI & 129 & 287 & 235 & 2\\
+\hline
+dice10 & NON & 115 & 2400 & 115 & 2340\\
+\cline{2-6}
+OUI & 69 & 50 & 20 & 2\\
+\hline
+dice20 & NON & 235 & 8400 & 235 & 8280\\
+\cline{2-6}
+OUI & 139 & 100 & 30 & 2\\
+\hline
+dice50 & NON & 595 & 48000 & 595 & 47700\\
+\cline{2-6}
+OUI & 349 & 250 & 60 & 2\\
+\hline
+dice50MEC & NON & 597 & 48001 & 598 & 47701\\
+\cline{2-6}
+OUI & 351 & 251 & 63 & 2\\
+\hline
+hallway5_5_1 & NON & 14400 & 9600 & 15000 & 1000\\
+\cline{2-6}
+OUI & 0 & 0 & 2 & 1\\
+\hline
+hallway8_8_1 & NON & 96768 & 64512 & 98304 & 2560\\
+\cline{2-6}
+OUI & 0 & 0 & 2 & 1\\
+\hline
+hallway10_10_1 & NON & 237600 & 158400 & 240000 & 4000\\
+\cline{2-6}
+OUI & 0 & 0 & 2 & 1\\
+\hline
+cdmsnMEC & NON & 606 & 605 & 2044 & 33\\
+\cline{2-6}
+OUI & 2 & 1 & 8 & 1\\
+\hline
+ManyMECs_1e1 & NON & 20 & 10 & 30 & 2\\
+\cline{2-6}
+OUI & 20 & 10 & 20 & 0\\
+\hline
+ManyMECs_1e2 & NON & 200 & 100 & 300 & 2\\
+\cline{2-6}
+OUI & 200 & 100 & 200 & 0\\
+\hline
+BigMec_1e1 & NON & 20 & 1 & 2 & 2\\
+\cline{2-6}
+OUI & 20 & 1 & 1 & 0\\
+\hline
+hm_30_5 & NON & 59 & 0 & 59 & 2\\
+\cline{2-6}
+OUI & 59 & 0 & 58 & 0\\
+\hline
+adt & NON & 201 & 24 & 18 & 80\\
+\cline{2-6}
+OUI & 34 & 9 & 10 & 2\\
+\hline
+two_investors & NON & 23411 & 106584 & 63542 & 42245\\
+\cline{2-6}
+OUI & 7979 & 46302 & 28192 & 2\\
+\hline
+coins & NON & 15 & 0 & 4 & 4\\
+\cline{2-6}
+OUI & 3 & 0 & 2 & 2\\
+\hline
+prison_dil & NON & 63 & 9 & 8 & 30\\
+\cline{2-6}
+OUI & 19 & 4 & 2 & 2\\
